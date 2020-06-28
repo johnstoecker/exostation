@@ -1,0 +1,104 @@
+/* $purple = #5c2686;
+$pink = ff1690;
+$darkpurple = $1c0658; */
+body {
+  margin: 0px;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.left-viewport {
+  flex: 1 0 auto;
+}
+
+.center-viewport {
+  flex: 1 0 auto;
+  max-width: 700px;
+  margin: 0;
+  /* background-color: #5c2686;
+  background-image: -webkit-gradient(linear, top, bottom, from(cyan), to(red));
+  background-image: -webkit-linear-gradient(top, cyan, red);
+  background-image: -moz-linear-gradient(top, cyan, red);
+  background-image: -o-linear-gradient(top, cyan, red);
+  background-image: linear-gradient(to bottom, cyan, red); */
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.right-viewport {
+  flex: 1 0 auto;
+}
+
+.station {
+  display: flex;
+  align-self: center;
+  color: #5c2686;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.console {
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+}
+
+.console input {
+  cursor: pointer;
+  height: 75px;
+}
+
+.background-container {
+   position:absolute;
+   bottom: 61%;
+   left: 0px;
+   z-index: -1;
+}
+
+.foreground-container {
+   position:absolute;
+   bottom: 61%;
+   left: 0px;
+}
+
+
+
+.sun-container {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+}
+
+.mountain-background {
+   width: 100%;
+   position: relative;
+}
+
+.mountain-foreground-left {
+  position: absolute;
+  bottom: -10px;
+}
+
+#pauseButton {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .console input {
+    height: 100px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .background-container {
+    bottom: 55%;
+  }
+}
