@@ -1,14 +1,20 @@
 import { Color, Group,Path,Point,Raster,Size,view,paper } from 'paper';
 
-import getNoise from './perlin'
+import SimplexNoise from 'simplex-noise';
 
 let worldData = {};
 
-let noise = getNoise.getNoise();
-noise.seed(Math.random())
+let simplex = new SimplexNoise()
 
 const WIDTH = 700;
 //const HEIGHT =
+
+/*
+ Planet ideas:
+ - sky is totally white
+
+ */
+
 
 
 function createWorld() {
@@ -31,17 +37,20 @@ function createWorld() {
 function createSky() {
   let sky = new Path.Rectangle({
       topLeft: worldData.topLeft,
-      bottomRight: worldData.bottomRightHorizon,
-      // Fill the path with a gradient of three color stops
-      // that runs between the two points we defined earlier:
-      fillColor: {
-          gradient: {
-              stops: ['lightred', 'red']
-          },
-          origin: new Point(view.bounds.width/2, 0),
-          destination: new Point(view.bounds.width/2, worldData.horizonHeight)
-      }
+      bottomRight: worldData.bottomRightHorizon
   });
+  let skyClipper = sky.clone();
+  sky.fillColor = {
+            gradient: {
+                stops: ['lightred', 'red']
+            },
+            origin: new Point(view.bounds.width/2, 0),
+            destination: new Point(view.bounds.width/2, worldData.horizonHeight)
+        }
+
+   let skyGroup = new Group();
+   skyGroup.addChild(createLineNoise(view.center.x, view.center.y, view.bounds.width, view.bounds.height, 5));
+   skyGroup.insertChild(0, skyClipper);
 }
 
 function createSea() {
@@ -74,7 +83,7 @@ function createStars() {
 
 // deform star horizontal lines
 function deformStar(starPosition, starSize) {
-  let starDeformColor = 'white';
+  let starDeformColor = new Color(1, 0.5);
   // how much line glitch the stars have
   let deformityScaling = 1.5;
   let center = starSize/2;
@@ -153,6 +162,41 @@ function createStars2() {
   }
 }
 
+// line noise function
+// makes a lines of noise
+function createLineNoise(x, y, width, height, alpha) {
+  let lininess = 13;
+  let raster = new Raster(new Size(width, height));
+  raster.setSize(new Size(width, height));
+  let imageData = raster.createImageData(new Size(width, height));
+
+  let prevRandom = Math.random() * 255;
+  let nextRandom;
+  for(let i = 0; i < width * height; i++) {
+      let offset = i * 4;
+      nextRandom = prevRandom + (Math.random() - 0.5) * lininess;
+      let value = Math.max(Math.min(nextRandom, 255), 0);
+      prevRandom = nextRandom;
+      // dont let it get too far out of bounds
+      if (prevRandom < -20){
+        prevRandom = -10;
+      } else if (prevRandom > 275) {
+        prevRandom = 265;
+      }
+
+
+      imageData.data[offset]      = value;
+      imageData.data[offset + 1]  = value;
+      imageData.data[offset + 2]  = value;
+      imageData.data[offset + 3]  = alpha;
+  }
+  raster.setImageData(imageData, new Point(0, 0));
+  raster.position = new Point(x, y);
+  raster.opacity = 1;
+  return raster;
+}
+
+
 // red noise function
 // make white noise reddish by averaging two adjacent random numbers
 function createRedNoise(x, y, width, height) {
@@ -196,13 +240,15 @@ function createNoise(x, y, width, height, waviness, alpha) {
     for (let x=0; x< width; x++) {
       let offset = i * 4;
 
+      let value2d = simplex.noise2D(x/width*waviness, y/height*waviness)
+
       // All noise functions return values in the range of -1 to 1.
-      var noiseValue = noise.simplex2(x / width*waviness, y / height*waviness);
+      // var noiseValue = noise.simplex2(x / width*waviness, y / height*waviness);
       // ... or noise.simplex3 and noise.perlin3:
       // var value = noise.simplex3(x / 100, y / 100, time);
       // image[x][y].r = Math.abs(value) * 256; // Or whatever. Open demo.html to see it used with canvas.
 
-      let value = Math.abs(noiseValue)*2 * 255;
+      let value = Math.abs(value2d)*2 * 255;
       prevRandom = nextRandom;
       imageData.data[offset]      = value;
       imageData.data[offset + 1]  = value;
@@ -236,7 +282,8 @@ function createMoon() {
   console.log(moonRadius);
   let rasterSizeX = Math.round(moonRadius*2);
   let rasterSizeY = Math.round(moonRadius*2);
-  let raster = createNoise(moonX, moonY, rasterSizeX, rasterSizeY, 1.5, 35);
+  let raster = createRedNoise(moonX, moonY, rasterSizeX, rasterSizeY);
+  // let raster = createNoise(moonX, moonY, rasterSizeX, rasterSizeY, 1.5, 35);
 
   // let moonSpots = []
   // for (let i=0; i<8; i++) {
@@ -304,6 +351,10 @@ function createIslands() {
       let islandSegmentY = y - islandHeight/islandSegments * j;
       if (j > islandSegments/2) {
         islandSegmentY = y - islandHeight/islandSegments * (islandSegments - j);
+      }
+      //sometimes dont have a peak
+      if (islandSegmentY > islandHeight/3 && Math.random() > 0.3) {
+        islandSegmentY -= islandHeight/islandSegments;
       }
       if (islandSegmentY + jitter < y) {
         jitter = jitter /4;

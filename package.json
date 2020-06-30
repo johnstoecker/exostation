@@ -24,6 +24,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "paper": "^0.12.8"
+    "paper": "^0.12.8",
+    "simplex-noise": "^2.4.0"
   }
 }
