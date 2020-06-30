@@ -1,6 +1,15 @@
-import { Group,Path,Point,Raster,Size,view,paper } from 'paper';
+import { Color, Group,Path,Point,Raster,Size,view,paper } from 'paper';
 
-var worldData = {};
+import getNoise from './perlin'
+
+let worldData = {};
+
+let noise = getNoise.getNoise();
+noise.seed(Math.random())
+
+const WIDTH = 700;
+//const HEIGHT =
+
 
 function createWorld() {
 
@@ -20,7 +29,7 @@ function createWorld() {
 }
 
 function createSky() {
-  var sky = new Path.Rectangle({
+  let sky = new Path.Rectangle({
       topLeft: worldData.topLeft,
       bottomRight: worldData.bottomRightHorizon,
       // Fill the path with a gradient of three color stops
@@ -36,7 +45,7 @@ function createSky() {
 }
 
 function createSea() {
-  var sea = new Path.Rectangle({
+  let sea = new Path.Rectangle({
       topLeft: worldData.bottomLeftHorizon,
       bottomRight: worldData.bottomRight,
       // Fill the path with a gradient of three color stops
@@ -52,11 +61,11 @@ function createSea() {
 }
 
 function createStars() {
-  var starColor = 'white';
-  for (var i=0; i<20; i++) {
-    var starSize = Math.floor(Math.random() * 5 + 2);
-    var starPosition = new Point(Math.random() * 700, Math.random() * worldData.horizonHeight);
-    var myCircle = new Path.Circle(starPosition, starSize);
+  let starColor = 'white';
+  for (let i=0; i<20; i++) {
+    let starSize = Math.floor(Math.random() * 5 + 2);
+    let starPosition = new Point(Math.random() * WIDTH, Math.random() * worldData.horizonHeight);
+    let myCircle = new Path.Circle(starPosition, starSize);
     myCircle.strokeColor = starColor;
     myCircle.fillColor = starColor;
     deformStar(starPosition, starSize);
@@ -65,41 +74,39 @@ function createStars() {
 
 // deform star horizontal lines
 function deformStar(starPosition, starSize) {
-  var starDeformColor = 'white';
+  let starDeformColor = 'white';
   // how much line glitch the stars have
-  var deformityScaling = 1.5;
-  var center = starSize/2;
-  for (var i=0; i< starSize; i++) {
-    var yOffset = 2 + Math.random() * (starSize*2-2);
+  let deformityScaling = 1.5;
+  let center = starSize/2;
+  for (let i=0; i< starSize; i++) {
+    let yOffset = 2 + Math.random() * (starSize*2-2);
     // make the stars have a cool effect where the deform lines are thicker in the center
-    var xScaleFromYOffset = yOffset;
+    let xScaleFromYOffset = yOffset;
     if (xScaleFromYOffset > starSize) {
       xScaleFromYOffset = starSize*2 - xScaleFromYOffset
     }
-    var sourceY = starPosition.y - starSize + yOffset;
-    var sourceX = starPosition.x - starSize - xScaleFromYOffset *deformityScaling + Math.random() * starSize;
-    var targetX = starPosition.x + Math.random() * (starSize + xScaleFromYOffset*deformityScaling);
-    var myDeformPath = new Path.Line(new Point(sourceX, sourceY), new Point(targetX, sourceY));
+    let sourceY = starPosition.y - starSize + yOffset;
+    let sourceX = starPosition.x - starSize - xScaleFromYOffset *deformityScaling + Math.random() * starSize;
+    let targetX = starPosition.x + Math.random() * (starSize + xScaleFromYOffset*deformityScaling);
+    let myDeformPath = new Path.Line(new Point(sourceX, sourceY), new Point(targetX, sourceY));
     myDeformPath.strokeColor = starDeformColor;
   }
 }
 
 function deformStarArc(starPosition, starSize) {
-  var starDeformColor = 'blue';
+  let starDeformColor = 'blue';
   // how big the ring is
-  var deformityScaling = 1;
-  var center = starSize/2;
-  var yOffset = center - Math.random()
-
-  var yOffset = 2 + Math.random() * (starSize*2-2);
-  var xScaleFromYOffset = center;
+  let deformityScaling = 1;
+  let center = starSize/2;
+  let yOffset = 2 + Math.random() * (starSize*2-2);
+  let xScaleFromYOffset = center;
   if (xScaleFromYOffset > starSize) {
     xScaleFromYOffset = starSize*2 - xScaleFromYOffset
   }
-  var sourceY = starPosition.y - starSize + yOffset;
-  var sourceX = starPosition.x - starSize - xScaleFromYOffset *deformityScaling + Math.random() * starSize;
-  var targetX = starPosition.x + Math.random() * (starSize + xScaleFromYOffset*deformityScaling);
-  var myDeformPath = new Path.Line(new Point(sourceX, sourceY), new Point(targetX, sourceY));
+  let sourceY = starPosition.y - starSize + yOffset;
+  let sourceX = starPosition.x - starSize - xScaleFromYOffset *deformityScaling + Math.random() * starSize;
+  let targetX = starPosition.x + Math.random() * (starSize + xScaleFromYOffset*deformityScaling);
+  let myDeformPath = new Path.Line(new Point(sourceX, sourceY), new Point(targetX, sourceY));
   myDeformPath.strokeColor = starDeformColor;
 }
 
@@ -107,20 +114,20 @@ function deformStarArc(starPosition, starSize) {
 
 function createStars2() {
   // stars
-  for (var i=0; i<20; i++) {
-    var starSize = 3//Math.floor(Math.random() * 5 + 2);
-    var starPosition = new Point(Math.random() * 700, Math.random() * worldData.horizonHeight);
-    // var myCircle = new Path.Circle(, );
+  for (let i=0; i<20; i++) {
+    let starSize = 3//Math.floor(Math.random() * 5 + 2);
+    let starPosition = new Point(Math.random() * WIDTH, Math.random() * worldData.horizonHeight);
+    // let myCircle = new Path.Circle(, );
     // myCircle.strokeColor = 'white';
     // myCircle.fillColor = 'white';
-    var raster = new Raster(new Size(starSize, starSize));
-    var imageData = raster.createImageData(new Size(starSize, starSize));
-    for (var j=0; j< starSize * starSize; j++) {
-      var value = 255;
-      var x = j % starSize;
-      var y = Math.floor(j / starSize);
-      var center = (starSize) / 2
-      var radius = (starSize) / 2
+    let raster = new Raster(new Size(starSize, starSize));
+    let imageData = raster.createImageData(new Size(starSize, starSize));
+    for (let j=0; j< starSize * starSize; j++) {
+      let value = 255;
+      let x = j % starSize;
+      let y = Math.floor(j / starSize);
+      let center = (starSize) / 2
+      let radius = (starSize) / 2
       console.log(x.toString() + " " + y.toString())
       console.log(center)
       console.log(radius)
@@ -135,7 +142,7 @@ function createStars2() {
         console.log('yes')
         value = 0;
       }
-      var offset = j*4;
+      let offset = j*4;
       imageData.data[offset] = value;
       imageData.data[offset + 1] = value;
       imageData.data[offset + 2] = value;
@@ -146,55 +153,99 @@ function createStars2() {
   }
 }
 
+// red noise function
+// make white noise reddish by averaging two adjacent random numbers
+function createRedNoise(x, y, width, height) {
+  let raster = new Raster(new Size(width, height));
+  raster.setSize(new Size(width, height));
+  let imageData = raster.createImageData(new Size(width, height));
+
+  let alpha = 35;
+  let prevRandom = Math.random() * 255;
+  let nextRandom;
+  // just noise
+  for(let i = 0; i < width * height; i++) {
+      let offset = i * 4;
+      nextRandom = Math.random() * 255;
+      let value = (prevRandom + nextRandom)/2;
+      prevRandom = nextRandom;
+      imageData.data[offset]      = value;
+      imageData.data[offset + 1]  = value;
+      imageData.data[offset + 2]  = value;
+      imageData.data[offset + 3]  = alpha;
+  }
+  raster.setImageData(imageData, new Point(0, 0));
+  raster.position = new Point(x, y);
+  raster.opacity = 1;
+  return raster;
+}
+
+// perlin noise function
+// make white noise reddish by averaging two adjacent random numbers
+function createNoise(x, y, width, height, waviness, alpha) {
+  // the higher this goes, the more intricate the noise patterns are
+  let raster = new Raster(new Size(width, height));
+  raster.setSize(new Size(width, height));
+  let imageData = raster.createImageData(new Size(width, height));
+
+  let prevRandom = Math.random() * 255;
+  let nextRandom;
+  // just noise
+  let i = 0;
+  for (let y=0; y<height; y++) {
+    for (let x=0; x< width; x++) {
+      let offset = i * 4;
+
+      // All noise functions return values in the range of -1 to 1.
+      var noiseValue = noise.simplex2(x / width*waviness, y / height*waviness);
+      // ... or noise.simplex3 and noise.perlin3:
+      // var value = noise.simplex3(x / 100, y / 100, time);
+      // image[x][y].r = Math.abs(value) * 256; // Or whatever. Open demo.html to see it used with canvas.
+
+      let value = Math.abs(noiseValue)*2 * 255;
+      prevRandom = nextRandom;
+      imageData.data[offset]      = value;
+      imageData.data[offset + 1]  = value;
+      imageData.data[offset + 2]  = value;
+      imageData.data[offset + 3]  = alpha;
+
+      i += 1;
+    }
+  }
+  raster.setImageData(imageData, new Point(0, 0));
+  raster.position = new Point(x, y);
+  raster.opacity = 1;
+  return raster;
+}
+
+
 function createMoon() {
-  var moonX = Math.random() * 15 + view.bounds.width/2 - 8;
-  var moonY = Math.random() * 15 + worldData.horizonHeight - 80;
-  var moonRadius = Math.random() * 15 + 35;
-  var moon = new Path.Circle(new Point(moonX, moonY), moonRadius);
+  let moonX = Math.random() * 15 + view.bounds.width/2 - 8;
+  let moonY = Math.random() * 15 + worldData.horizonHeight - 80;
+  let moonRadius = Math.random() * 15 + 35;
+  let moon = new Path.Circle(new Point(moonX, moonY), moonRadius);
   // moon.strokeColor = 'white';
   moon.fillColor = 'white';
 
 
 
-  var moonClipper = new Path.Circle(new Point(moonX, moonY), moonRadius);
-  // var moonClipper = new Path.Rectangle(new Point(moonX, moonY), 30, 30)
-  // var url = './noise-99.png';
-  // var raster = new Raster(url);
+  let moonClipper = new Path.Circle(new Point(moonX, moonY), moonRadius);
+  // let moonClipper = new Path.Rectangle(new Point(moonX, moonY), 30, 30)
+  // let url = './noise-99.png';
+  // let raster = new Raster(url);
   console.log(moonRadius);
-  var rasterSizeX = Math.round(moonRadius*2);
-  var rasterSizeY = Math.round(moonRadius*2);
-  var raster = new Raster(new Size(rasterSizeX, rasterSizeY));
-  raster.setSize(new Size(rasterSizeX, rasterSizeY));
-  var imageData = raster.createImageData(new Size(rasterSizeX, rasterSizeY));
+  let rasterSizeX = Math.round(moonRadius*2);
+  let rasterSizeY = Math.round(moonRadius*2);
+  let raster = createNoise(moonX, moonY, rasterSizeX, rasterSizeY, 1.5, 35);
 
-  var moonNoiseAlpha = 35;
-  // just noise
-  for(var i = 0; i < rasterSizeX * rasterSizeY; i++) {
-      var offset = i * 4;
-      var value = (Math.random() * 255);
-      imageData.data[offset]      = value;
-      imageData.data[offset + 1]  = value;
-      imageData.data[offset + 2]  = value;
-      imageData.data[offset + 3]  = moonNoiseAlpha;
-  }
-
-
-  raster.setImageData(imageData, new Point(0, 0));
-
-
-
-  // raster.opacity = 0.1;
-  raster.position = new Point(moonX,moonY);
-  raster.opacity = 1;
-
-  // var moonSpots = []
-  // for (var i=0; i<8; i++) {
+  // let moonSpots = []
+  // for (let i=0; i<8; i++) {
   //   moonSpots.push(createMoonSpot(moonX, moonY, moonRadius));
   // }
 
-  var moonGroup = new Group();
+  let moonGroup = new Group();
   moonGroup.addChild(raster);
-  for (var i=0; i < 6; i++) {
+  for (let i=0; i < 6; i++) {
     moonGroup.addChild(createMoonSpot(moonX, moonY, moonRadius));
   }
   moonGroup.insertChild(0, moonClipper);
@@ -204,24 +255,83 @@ function createMoon() {
 
 
 function createMoonSpot(moonX, moonY, moonRadius) {
-  var moonSpotX = Math.random() * moonRadius * 2 + moonX - moonRadius;
-  var moonSpotY = Math.random() * moonRadius * 2 + moonY - moonRadius;
-  var moonSpotRadius = Math.random() * moonRadius / 5;
-  var moonSpot = new Path.Circle(new Point(moonSpotX, moonSpotY), moonSpotRadius);
+  let moonSpotX = Math.random() * moonRadius * 2 + moonX - moonRadius;
+  let moonSpotY = Math.random() * moonRadius * 2 + moonY - moonRadius;
+  let moonSpotRadius = Math.random() * moonRadius / 5;
+  let moonSpot = new Path.Circle(new Point(moonSpotX, moonSpotY), moonSpotRadius);
   moonSpot.fillColor = 'white';
   return moonSpot;
 }
 
 function createIslands() {
+  let islandColor = 'grey';
+  let islandRockiness = 5
+  //sometimes won't have that many
+  let numIslands = 5;
+  let islandHeights = [];
+  //this is the easiest way of ensuring islands draw with correct z-index. 80/20
+  for (let i=0; i<numIslands; i++) {
+    islandHeights.push(Math.random() * (window.innerHeight - worldData.horizonHeight) + worldData.horizonHeight);
+  }
+  islandHeights.sort();
   // islands
   // TODO: this should come in front of the moon
-  for (var i=0; i<6; i++) {
-    var myCircle = new Path.Circle(new Point(Math.random() * 700, Math.random() * 300 + worldData.horizonHeight), Math.random() * 20 + 40);
-    myCircle.strokeColor = 'green';
-    // myCircle.selected = true;
-    myCircle.fillColor = 'green';
+  for (let i=0; i<numIslands; i++) {
+    let y = islandHeights[i];
+    //islands get darker as they move away from the sun
+    let islandColorValue = 0.2 + (1-y/window.innerHeight);
+    console.log(islandColorValue);
+    // console.log(y);
+    let x = Math.random() * WIDTH - 200 + 100;
+    let islandWidth = Math.random() * 200 + 200;
+    let islandHeight = Math.random() * 100 + 100;
+    let islandSegments = Math.floor(Math.random() * 4 + 5);
+    // direction to build the island towards
+    let direction = 1;
 
-    myCircle.removeSegment(3);
+    if (x < WIDTH/2) {
+      direction = -1;
+    }
+
+    let path = new Path();
+
+    //path.strokeColor = new Color(islandColorValue);
+    path.add(new Point(x, y));
+    for (let j=1; j<islandSegments; j++){
+      let jitter = (Math.random() - 0.5) * islandHeight/islandSegments/4 * islandRockiness;
+      let islandSegmentX = x + islandWidth/islandSegments * j * direction;
+
+      let islandSegmentY = y - islandHeight/islandSegments * j;
+      if (j > islandSegments/2) {
+        islandSegmentY = y - islandHeight/islandSegments * (islandSegments - j);
+      }
+      if (islandSegmentY + jitter < y) {
+        jitter = jitter /4;
+      }
+      // console.log(islandSegmentX.toString() + " " + islandSegmentY.toString())
+      path.add(new Point(islandSegmentX, islandSegmentY + jitter));
+    }
+    path.add(new Point(x+islandWidth * direction,y));
+    path.smooth();
+
+    let pathClipper = path.clone();
+
+    path.fillColor = new Color(islandColorValue);
+
+
+    let islandNoiseGroup = new Group();
+    let boundingBox = pathClipper.bounds;
+    islandNoiseGroup.addChild(createNoise(boundingBox.center.x, boundingBox.center.y, boundingBox.width, boundingBox.height, 12, 10));
+    islandNoiseGroup.insertChild(0, pathClipper);
+    islandNoiseGroup.clipped = true;
+
+
+    // let myCircle = new Path.Circle(new Point(Math.random() * WIDTH, Math.random() * 300 + worldData.horizonHeight), Math.random() * 20 + 40);
+    // myCircle.strokeColor = 'green';
+    // // myCircle.selected = true;
+    // myCircle.fillColor = 'green';
+    //
+    // myCircle.removeSegment(3);
   }
 }
 

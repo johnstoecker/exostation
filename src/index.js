@@ -7,7 +7,6 @@ import world from './world';
 window.onload = function() {
   world.createWorld();
 
-
   // change these settings
   // var patternSize = 64,
   //     patternScaleX = 3,
