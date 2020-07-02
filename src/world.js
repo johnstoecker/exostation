@@ -1,6 +1,7 @@
 import { Color, Group,Path,Point,Raster,Size,view,paper } from 'paper';
 import Noise from './noise';
 import Island from './islands';
+import Boat from './boat';
 
 let worldData = {};
 
@@ -31,6 +32,7 @@ function createWorld() {
   worldData.moon = createMoon();
   createStars(worldData);
   Island.createIslands(worldData);
+  Boat.createBoat(worldData);
 }
 
 function createSky() {
@@ -73,7 +75,7 @@ function createSea() {
 function createStars(worldData) {
   let starColor = new Color(0.6);
   for (let i=0; i<20; i++) {
-    let starSize = Math.floor(Math.random() * 5 + 2);
+    let starSize = Math.floor(Math.random() * 2 + 1);
     let starPosition = new Point(Math.random() * WIDTH, Math.random() * worldData.horizonHeight);
     if (starPosition.getDistance(worldData.moon.position) < worldData.moon.radius + 30
       || starPosition.y > worldData.horizonHeight - 15) {
