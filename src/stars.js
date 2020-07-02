@@ -1,11 +1,11 @@
 import { Color, Path, Point } from 'paper';
 
-function createStars(worldData) {
+function createStars(worldData, moon) {
   let starColor = new Color(0.6);
   for (let i=0; i<20; i++) {
     let starSize = Math.floor(Math.random() * 2 + 1);
     let starPosition = new Point(Math.random() * worldData.width, Math.random() * worldData.horizonHeight);
-    if (starPosition.getDistance(worldData.moon.position) < worldData.moon.radius + 30
+    if (starPosition.getDistance(moon.position) < moon.radius + 30
       || starPosition.y > worldData.horizonHeight - 15) {
       continue;
     }
