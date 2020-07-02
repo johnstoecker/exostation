@@ -1,32 +1,31 @@
-import { Color, Path, Point } from 'paper';
+import { Color, Group, Path, Point } from 'paper';
 
 function createBoat(worldData) {
-  let boat = {
-    x: Math.random() * 20 + 340,
-    y: Math.random() * 20 + worldData.horizonHeight + 40
-  };
-  boat.hull = createHull(boat);
-  boat.sails = createSails(boat);
+  let boatPosition = new Point(Math.random() * 20 + 340, Math.random() * 20 + worldData.horizonHeight + 40);
+  let boat = new Group();
+  boat.addChild(createHull(boatPosition));
+  boat.addChild(createSails(boatPosition));
+  return boat;
 }
 
-function createSails(boat) {
+function createSails(boatPosition) {
   let sails = new Path();
-  sails.add(new Point(boat.x-1, boat.y - 5));
-  sails.add(new Point(boat.x+1, boat.y+6));
-  sails.add(new Point(boat.x+6, boat.y + 6));
-  sails.add(new Point(boat.x, boat.y - 5));
-  sails.add(new Point(boat.x-6, boat.y+6));
-  sails.add(new Point(boat.x-3, boat.y+6));
-  sails.add(new Point(boat.x-1, boat.y - 5));
+  sails.add(new Point(boatPosition.x-1, boatPosition.y - 5));
+  sails.add(new Point(boatPosition.x+1, boatPosition.y+6));
+  sails.add(new Point(boatPosition.x+6, boatPosition.y + 6));
+  sails.add(new Point(boatPosition.x, boatPosition.y - 5));
+  sails.add(new Point(boatPosition.x-6, boatPosition.y+6));
+  sails.add(new Point(boatPosition.x-3, boatPosition.y+6));
+  sails.add(new Point(boatPosition.x-1, boatPosition.y - 5));
   sails.strokeColor = 'red';
   sails.strokeWidth = 0.5;
   sails.fillColor = 'white';
   return sails;
 }
 
-function createHull(boat) {
+function createHull(boatPosition) {
   let hull = new Path();
-  let hullLowerLeft = new Point(boat.x - 4, boat.y + 10);
+  let hullLowerLeft = new Point(boatPosition.x - 4, boatPosition.y + 10);
   hull.add(hullLowerLeft);
   hull.add(new Point(hullLowerLeft.x + 8, hullLowerLeft.y));
   hull.add(new Point(hullLowerLeft.x + 12, hullLowerLeft.y-3));

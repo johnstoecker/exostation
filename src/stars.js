@@ -1,6 +1,7 @@
 import { Color, Path, Point } from 'paper';
 
-function createStars(worldData, moon) {
+function createStars(worldData, moonGroup) {
+  let moon = moonGroup.children[0].toShape();
   let starColor = new Color(0.6);
   for (let i=0; i<20; i++) {
     let starSize = Math.floor(Math.random() * 2 + 1);

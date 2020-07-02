@@ -35,7 +35,18 @@ function createWorld() {
   worldData.stars = skyContainer.stars;
   createSea();
   Island.createIslands(worldData);
-  Boat.createBoat(worldData);
+  worldData.boat = Boat.createBoat(worldData);
+
+  view.onFrame = onFrame;
+
+  view.draw();
+}
+
+function onFrame(event) {
+  // every 10th frame, move the boat
+  if(event.count % 3 == 0) {
+    worldData.boat.translate(new Point(0.3,0))
+  }
 }
 
 function createSea() {
