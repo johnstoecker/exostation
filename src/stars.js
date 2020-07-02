@@ -37,7 +37,24 @@ function deformStar(starPosition, starSize) {
   }
 }
 
+function createStarBurst(position) {
+  let starBurstSize = 3;
+  let starBurst = new Path();
+  starBurst.add(new Point(position.x+starBurstSize, position.y));
+  starBurst.add(new Point(position.x+starBurstSize/4, position.y-starBurstSize/4));
+  starBurst.add(new Point(position.x, position.y-starBurstSize));
+  starBurst.add(new Point(position.x-starBurstSize/4, position.y-starBurstSize/4));
+  starBurst.add(new Point(position.x-starBurstSize, position.y));
+  starBurst.add(new Point(position.x-starBurstSize/4, position.y+starBurstSize/4));
+  starBurst.add(new Point(position.x, position.y+starBurstSize));
+  starBurst.add(new Point(position.x+starBurstSize/4, position.y+starBurstSize/4));
+  starBurst.smooth();
+  starBurst.fillColor = 'yellow';
+  return starBurst;
+}
+
 
 export default {
-  createStars: createStars
+  createStars: createStars,
+  createStarBurst: createStarBurst
 }

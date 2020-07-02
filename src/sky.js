@@ -18,17 +18,28 @@ function createSky(worldData) {
         }
 
    let skyGroup = new Group();
+   skyContainer.starBursts = [];
    skyGroup.addChild(Noise.createLineNoise(view.center.x, view.center.y, view.bounds.width, view.bounds.height, 5));
    skyGroup.insertChild(0, skyClipper);
+   skyGroup.onClick = function(event) {
+     skyContainer.starBursts.push(Star.createStarBurst(event.point));
+   }
+   skyGroup.onMouseDrag = function(event) {
+     skyContainer.starBursts.push(Star.createStarBurst(event.point));
+   }
 
    skyContainer.sky = sky;
    skyContainer.moon = createMoon(worldData);
+
+   skyContainer.moon.onClick = function(event) {
+     for (let i=0; i<skyContainer.starBursts.length; i++) {
+       skyContainer.starBursts[i].remove();
+     }
+   }
    skyContainer.stars = Star.createStars(worldData, skyContainer.moon);
 
    return skyContainer;
 }
-
-
 
 //TODO: deform star with Path.arc that makes rings
 function deformStarArc(starPosition, starSize) {
@@ -77,7 +88,7 @@ function createMoon(worldData) {
   moonGroup.insertChild(0, moonClipper);
 
   moonGroup.clipped = true;
-  return moon.toShape();
+  return moonGroup;
 }
 
 
