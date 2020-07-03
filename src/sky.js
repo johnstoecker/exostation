@@ -22,6 +22,7 @@ function createSky(worldData) {
    skyGroup.addChild(Noise.createLineNoise(view.center.x, view.center.y, view.bounds.width, view.bounds.height, 5));
    skyGroup.insertChild(0, skyClipper);
    skyGroup.onClick = function(event) {
+     // TODO: brighten moon if there are any starbursts
      skyContainer.starBursts.push(Star.createStarBurst(event.point));
    }
    skyGroup.onMouseDrag = function(event) {
@@ -33,6 +34,7 @@ function createSky(worldData) {
 
    skyContainer.moon.onClick = function(event) {
      for (let i=0; i<skyContainer.starBursts.length; i++) {
+       // TODO: de-brighten moon
        skyContainer.starBursts[i].remove();
      }
    }

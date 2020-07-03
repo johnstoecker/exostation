@@ -32,6 +32,9 @@ function createIslands(worldData) {
   for (let i=0; i<numIslands; i++) {
     let x = islandCoords[i][0];
     let y = islandCoords[i][1];
+    islands.push({});
+    islands[i].x = x;
+    islands[i].y = y;
     //islands get darker as they move away from the sun
     let islandColorValue = 0.2 + (1-y/window.innerHeight);
     // console.log(y);
@@ -130,7 +133,8 @@ function createIslands(worldData) {
     // myCircle.fillColor = 'green';
     //
     // myCircle.removeSegment(3);
-    islands.push(path);
+    islands[i].path = path;
+    islands[i].noiseGroup = islandNoiseGroup;
   }
   return islands;
 }

@@ -1,4 +1,4 @@
-import { Color, Group,Path,Point,Raster,Size,view,paper } from 'paper';
+import { Color, Group,Path,Point,Raster,Size,view,paper,project } from 'paper';
 import Star from './stars';
 import Noise from './noise';
 import Island from './islands';
@@ -37,9 +37,8 @@ function createWorld() {
   worldData.sky = skyContainer.sky;
   worldData.stars = skyContainer.stars;
   worldData.sea = createSea(worldData);
-  worldData.islands = Island.createIslands(worldData);
+  worldData.islandsContainer = Island.createIslands(worldData);
   worldData.boat = Boat.createBoat(worldData);
-
   worldData.sea.onClick = moveBoat;
 
 
@@ -58,11 +57,14 @@ function moveBoat(event) {
 }
 
 function onFrame(event) {
-  let boatSpeed = 0.5;
+  let boatSpeed = 5;
   // every 10th frame, move the boat
   if(event.count % 3 == 0 && worldData.boatTarget && worldData.boatAngle) {
 
     // TODO: collision checking with islands
+    // collide with just the bottom foothills --
+    // otherwise put the z-index of the boat behind the mountain
+
     //dont let the boat sail off the edge
     if ((worldData.boat.position.x < 10 && (worldData.boatAngle > Math.PI/2 || worldData.boatAngle < - Math.PI/2))
       || (worldData.boat.position.x > worldData.width - 10 && (worldData.boatAngle < Math.PI/2 && worldData.boatAngle > -Math.PI/2))
@@ -75,7 +77,40 @@ function onFrame(event) {
       worldData.boatTarget = null;
       worldData.boatAngle = null;
     } else {
-      worldData.boat.translate(new Point(boatSpeed * Math.cos(worldData.boatAngle), boatSpeed * Math.sin(worldData.boatAngle)))
+      let canMove = true;
+      let iPosDebug = 0;
+      let xDelta = boatSpeed * Math.cos(worldData.boatAngle);
+      let yDelta = boatSpeed * Math.sin(worldData.boatAngle);
+      worldData.boat.translate(new Point(xDelta, yDelta))
+      for(let i=0; i<worldData.islandsContainer.length; i++) {
+        if(worldData.boat.children[0].intersects(worldData.islandsContainer[i].path)
+          || (worldData.islandsContainer[i].path.contains(worldData.boat.children[0].bounds.bottomLeft))
+          || (worldData.islandsContainer[i].path.contains(worldData.boat.children[0].bounds.bottomRight))) {
+          if(worldData.boat.children[0].bounds.bottomLeft.y > worldData.islandsContainer[i].y) {
+            canMove = false;
+          }
+        }
+      }
+      //dont let the boat pass through an island
+      //naive implementation -- just move it backward
+      if (!canMove) {
+        worldData.boat.translate(new Point(-xDelta, -yDelta));
+        worldData.boatTarget = null;
+        worldData.boatAngle = null;
+      }
+
+    }
+    updateBoatZIndex();
+  }
+}
+
+function updateBoatZIndex() {
+  for (let i=worldData.islandsContainer.length-1; i>=0; i--) {
+    if (worldData.boat.bounds.bottomLeft.y <=worldData.islandsContainer[i].y ){
+      worldData.boat.insertBelow(worldData.islandsContainer[i].path);
+    } else {
+      worldData.boat.insertAbove(worldData.islandsContainer[i].path);
+      break;
     }
   }
 }
