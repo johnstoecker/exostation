@@ -22,11 +22,24 @@ function createSky(worldData) {
    skyGroup.addChild(Noise.createLineNoise(view.center.x, view.center.y, view.bounds.width, view.bounds.height, 5));
    skyGroup.insertChild(0, skyClipper);
    skyGroup.onClick = function(event) {
-     // TODO: brighten moon if there are any starbursts
+     if (!worldData.moonIsBright) {
+       worldData.moonIsBright = true;
+       worldData.moon.children[1].fillColor = new Color(0.95);
+       for(let i=2; i<worldData.moon.children[2].children.length; i++) {
+         worldData.moon.children[2].children[i].fillColor = new Color(0.9);
+       }
+     }
      skyContainer.starBursts.push(Star.createStarBurst(event.point));
    }
    skyGroup.onMouseDrag = function(event) {
      skyContainer.starBursts.push(Star.createStarBurst(event.point));
+     if (!worldData.moonIsBright) {
+       worldData.moonIsBright = true;
+       worldData.moon.children[1].fillColor = new Color(0.95);
+       for(let i=2; i<worldData.moon.children[2].children.length; i++) {
+         worldData.moon.children[2].children[i].fillColor = new Color(0.9);
+       }
+     }
    }
 
    skyContainer.sky = sky;
@@ -34,8 +47,13 @@ function createSky(worldData) {
 
    skyContainer.moon.onClick = function(event) {
      for (let i=0; i<skyContainer.starBursts.length; i++) {
-       // TODO: de-brighten moon
        skyContainer.starBursts[i].remove();
+     }
+
+     worldData.moonIsBright = false;
+     worldData.moon.children[1].fillColor = 'white';
+     for(let i=2; i<worldData.moon.children[2].children.length; i++) {
+       worldData.moon.children[2].children[i].fillColor = 'white';
      }
    }
    skyContainer.stars = Star.createStars(worldData, skyContainer.moon);
@@ -62,6 +80,7 @@ function deformStarArc(starPosition, starSize) {
 }
 
 function createMoon(worldData) {
+  let moonGroup = new Group();
   let moonX = Math.random() * 15 + view.bounds.width/2 - 8;
   let moonY = Math.random() * 15 + worldData.horizonHeight - 80;
   let moonRadius = Math.random() * 15 + 35;
@@ -82,14 +101,18 @@ function createMoon(worldData) {
   //   moonSpots.push(createMoonSpot(moonX, moonY, moonRadius));
   // }
 
-  let moonGroup = new Group();
-  moonGroup.addChild(raster);
+  let moonNoiseGroup = new Group();
+  moonNoiseGroup.addChild(raster);
   for (let i=0; i < 6; i++) {
-    moonGroup.addChild(createMoonSpot(moonX, moonY, moonRadius));
+    let moonSpot = createMoonSpot(moonX, moonY, moonRadius);
+    moonNoiseGroup.addChild(moonSpot);
+    moonNoiseGroup.addChild(Noise.createCircleNoise(moonSpot.position.x, moonSpot.position.y, moonSpot.toShape().radius))
   }
-  moonGroup.insertChild(0, moonClipper);
+  moonNoiseGroup.insertChild(0, moonClipper);
+  moonNoiseGroup.clipped = true;
+  moonGroup.addChild(moon);
+  moonGroup.addChild(moonNoiseGroup);
 
-  moonGroup.clipped = true;
   return moonGroup;
 }
 

@@ -7,7 +7,8 @@ import Sky from './sky';
 
 let worldData = {};
 
-const WIDTH = 700;
+const MAX_WIDTH = 700;
+
 //const HEIGHT =
 
 /*
@@ -58,17 +59,13 @@ function moveBoat(event) {
 
 function onFrame(event) {
   let boatSpeed = 5;
-  // every 10th frame, move the boat
-  if(event.count % 3 == 0 && worldData.boatTarget && worldData.boatAngle) {
 
-    // TODO: collision checking with islands
-    // collide with just the bottom foothills --
-    // otherwise put the z-index of the boat behind the mountain
+  if(event.count % 3 == 0 && worldData.boatTarget && worldData.boatAngle) {
 
     //dont let the boat sail off the edge
     if ((worldData.boat.position.x < 10 && (worldData.boatAngle > Math.PI/2 || worldData.boatAngle < - Math.PI/2))
       || (worldData.boat.position.x > worldData.width - 10 && (worldData.boatAngle < Math.PI/2 && worldData.boatAngle > -Math.PI/2))
-      || (worldData.boat.position.y < worldData.horizonHeight + 10 && worldData.boatAngle < 0)
+      || (worldData.boat.position.y < worldData.horizonHeight + 5 && worldData.boatAngle < 0)
       || (worldData.boat.position.y > worldData.height - 10 && worldData.boatAngle > 0)) {
       worldData.boatTarget = null;
       worldData.boatAngle = null;

@@ -141,6 +141,53 @@ function mixColors(colorA, colorB, ratio) {
   , colorA.blue * (1-ratio) + colorB.blue * ratio);
 }
 
+
+//noise generated inward -- no noise towards center, noisy at the ring-u
+function createCircleNoise(x, y, radius) {
+  radius = Math.max(radius, 1);
+  let raster = new Raster(new Size(radius*2, radius*2));
+  raster.setSize(new Size(radius*2, radius*2));
+  let imageData = raster.createImageData(new Size(radius*2, radius*2));
+  let center = new Point(radius-1, radius-1);
+  let alpha = 35;
+  let prevRandom = Math.random() * 255;
+  let nextRandom;
+
+  let i = 0;
+  for (let y=0; y<radius*2; y++) {
+    for (let x=0; x< radius*2; x++) {
+      let offset = i*4;
+
+      nextRandom = Math.random() * 255;
+      let valueFunc = 1;
+      let distanceFactor = new Point(x,y).getDistance(center)/radius;
+      console.log(new Point(x,y).getDistance(center))
+      if (distanceFactor > 1) {
+        alpha = 0;
+      } else {
+        console.log('outside!')
+        alpha = distanceFactor * 55;
+      }
+      console.log(valueFunc)
+      let value = (prevRandom + nextRandom)/2;
+
+      prevRandom = nextRandom;
+      imageData.data[offset]      = value;
+      imageData.data[offset + 1]  = value;
+      imageData.data[offset + 2]  = value;
+      imageData.data[offset + 3]  = alpha;
+
+      i++;
+    }
+    i--;
+  }
+
+  raster.setImageData(imageData, new Point(0, 0));
+  raster.position = new Point(x, y);
+  raster.opacity = 1;
+  return raster;
+}
+
 // perlin noise function
 // make white noise reddish by averaging two adjacent random numbers
 function createNoise(x, y, width, height, waviness, alpha) {
@@ -218,6 +265,7 @@ function createNoise(x, y, width, height, waviness, alpha) {
 
 export default {
   createNoise:createNoise,
+  createCircleNoise: createCircleNoise,
   createLineNoise: createLineNoise,
   createRedNoise: createRedNoise,
   createMarbleNoise: createMarbleNoise
