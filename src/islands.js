@@ -3,6 +3,7 @@ import Noise from './noise';
 
 
 function createIslands(worldData) {
+  let islands = [];
   let islandColor = 'grey';
   let islandRockiness = 5
   //sometimes won't have that many if they generate too close
@@ -28,7 +29,6 @@ function createIslands(worldData) {
     }
   }
   // islands
-  // TODO: this should come in front of the moon
   for (let i=0; i<numIslands; i++) {
     let x = islandCoords[i][0];
     let y = islandCoords[i][1];
@@ -83,7 +83,6 @@ function createIslands(worldData) {
       // pathPoints
     }
 
-
     path.add(new Point(x+islandWidth * direction,y));
 
     //build the foothills
@@ -131,7 +130,9 @@ function createIslands(worldData) {
     // myCircle.fillColor = 'green';
     //
     // myCircle.removeSegment(3);
+    islands.push(path);
   }
+  return islands;
 }
 
 function drawPathDown(x, y, targetY, islandColorValue, lightSourceX) {
