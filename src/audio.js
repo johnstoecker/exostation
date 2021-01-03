@@ -20,9 +20,10 @@ var exostationAudio = {
 // Rainy Days In Tokyo Lofi Hip Hop Jazzhop Chillhop Mix - Beats to chillstudyrelax [2cSj]
 // https://a1airadionetwork.com
 
+// http://aska.ru-hoster.com:8053/stream
 
 var streams = [
-  { name: "Chill Cafe", src: "http://192.99.35.215:5078/IRN_Rocks", details: "Chill Cafe https://a1airadionetwork.com" }
+  { name: "Chill", src: "http://aska.ru-hoster.com:8053/stream", details: "http://lifechillmusic.com" }
 ];
 
 var currentStreamIndex = 0;
