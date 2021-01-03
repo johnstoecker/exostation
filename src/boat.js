@@ -5,6 +5,7 @@ function createBoat(worldData) {
   let boat = new Group();
   boat.addChild(createHull(boatPosition));
   boat.addChild(createSails(boatPosition));
+  boat.addChild(createWaves(boatPosition));
   return boat;
 }
 
@@ -35,6 +36,34 @@ function createHull(boatPosition) {
   hull.strokeWidth = 0.5;
   hull.fillColor = 'lightbrown';
   return hull;
+}
+
+function createWaves(boatPosition) {
+  let waves = new Group();
+  let wavesLeft = new Path();
+  wavesLeft.add(new Point(boatPosition.x - 6, boatPosition.y + 10));
+  wavesLeft.add(new Point(boatPosition.x - 5, boatPosition.y + 11));
+  wavesLeft.add(new Point(boatPosition.x - 3, boatPosition.y + 11));
+  wavesLeft.smooth();
+  wavesLeft.strokeColor = new Color('white');
+  wavesLeft.strokeWidth = 0.5;
+
+  let wavesRight = new Path();
+  wavesRight.add(new Point(boatPosition.x + 6, boatPosition.y + 10));
+  wavesRight.add(new Point(boatPosition.x + 5, boatPosition.y + 11));
+  wavesRight.add(new Point(boatPosition.x + 3, boatPosition.y + 11));
+  wavesRight.smooth();
+  wavesRight.strokeColor = new Color('white');
+  wavesRight.strokeWidth = 0.5;
+
+  waves.addChild(wavesLeft);
+  waves.addChild(wavesRight);
+  waves.opacity = 0;
+  return waves;
+}
+
+function removeWaves() {
+
 }
 
 export default {

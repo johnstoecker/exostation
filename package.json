@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "paper": "^0.12.8",
-    "simplex-noise": "^2.4.0"
+    "rss-parser": "^3.10.0",
+    "simplex-noise": "^2.4.0",
+    "typewriter-effect": "^2.17.0"
   }
 }

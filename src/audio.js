@@ -13,12 +13,10 @@ var exostationAudio = {
 //http://192.99.17.12:4516/listen.pls?sid=1&t=.m3u
 //http://149.56.157.81:5104/listen.pls?sid=1&t=.m3u jrfmnetwork.com JR.FM Chill/Lounge Radio
 
-
-
 //https://www.internet-radio.com/servers/tools/playlistgenerator/?u=http://192.99.35.215:5078/listen.pls?sid=1&t=.m3u
 // Chill Cafe
 // Rainy Days In Tokyo Lofi Hip Hop Jazzhop Chillhop Mix - Beats to chillstudyrelax [2cSj]
-// https://a1airadionetwork.com
+// https://a1airadionetwork.com DEFUNCT!
 
 // http://aska.ru-hoster.com:8053/stream
 
@@ -79,13 +77,13 @@ function startStream() {
 
   chillAudio.src = streams[currentStreamIndex].src;
   console.log("loading " + streams[currentStreamIndex].details);
-  document.getElementById("currentStation").innerHTML = streams[currentStreamIndex].name;
+  // document.getElementById("currentStation").innerHTML = streams[currentStreamIndex].name;
   // exostationAudio.audio.crossOrigin = "anonymous";
   // exostationAudio.audio.controls = false;
   // exostationAudio.audio.style.position = "absolute"
   // exostationAudio.audio.style.bottom = "10px"
-  // exostationAudio.audio.id = "radioStream"
-  // document.getElementById('audio_box').appendChild(exostationAudio.audio);
+  chillAudio.id = "radioStream"
+  document.getElementById('audio_box').appendChild(chillAudio);
 
   exostationAudio.audio = chillAudio;
   chillAudio.play();

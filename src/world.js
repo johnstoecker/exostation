@@ -4,9 +4,9 @@ import Noise from './noise';
 import Island from './islands';
 import Boat from './boat';
 import Sky from './sky';
+import Portal from './portal';
 
 let worldData = {};
-
 const MAX_WIDTH = 700;
 
 //const HEIGHT =
@@ -14,6 +14,8 @@ const MAX_WIDTH = 700;
 /*
  Planet ideas:
  - sky is totally white
+ - multiple moons
+ - nebulae
 
  */
 
@@ -40,8 +42,10 @@ function createWorld() {
   worldData.sea = createSea(worldData);
   worldData.islandsContainer = Island.createIslands(worldData);
   worldData.boat = Boat.createBoat(worldData);
-  worldData.sea.onClick = moveBoat;
+  worldData.portal = Portal.createPortal(worldData);
 
+  worldData.sea.onClick = moveBoat;
+  worldData.portal.onClick = moveBoat;
 
   view.onFrame = onFrame;
 
@@ -49,12 +53,19 @@ function createWorld() {
 }
 
 function moveBoat(event) {
+  worldData.boat.getChildren()[2].opacity = 100;
   worldData.boatTarget = new Point(event.point.x, event.point.y)
   console.log(worldData.boat.position);
   console.log(worldData.boatTarget);
 
   worldData.boatAngle = new Point(worldData.boatTarget.x - worldData.boat.position.x, worldData.boatTarget.y - worldData.boat.position.y).getAngleInRadians();
   console.log(worldData.boatAngle);
+}
+
+function stopBoat() {
+  worldData.boatTarget = null;
+  worldData.boatAngle = null;
+  worldData.boat.getChildren()[2].opacity = 0;
 }
 
 function onFrame(event) {
@@ -67,12 +78,10 @@ function onFrame(event) {
       || (worldData.boat.position.x > worldData.width - 10 && (worldData.boatAngle < Math.PI/2 && worldData.boatAngle > -Math.PI/2))
       || (worldData.boat.position.y < worldData.horizonHeight + 5 && worldData.boatAngle < 0)
       || (worldData.boat.position.y > worldData.height - 10 && worldData.boatAngle > 0)) {
-      worldData.boatTarget = null;
-      worldData.boatAngle = null;
+        stopBoat();
     } else if (worldData.boat.position.isClose(worldData.boatTarget, boatSpeed)) {
       worldData.boat.translate(new Point(worldData.boatTarget.x - worldData.boat.position.x, worldData.boatTarget.y - worldData.boat.position.y))
-      worldData.boatTarget = null;
-      worldData.boatAngle = null;
+      stopBoat();
     } else {
       let canMove = true;
       let iPosDebug = 0;
@@ -92,8 +101,7 @@ function onFrame(event) {
       //naive implementation -- just move it backward
       if (!canMove) {
         worldData.boat.translate(new Point(-xDelta, -yDelta));
-        worldData.boatTarget = null;
-        worldData.boatAngle = null;
+        stopBoat();
       }
 
     }

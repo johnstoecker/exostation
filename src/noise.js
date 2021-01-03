@@ -81,7 +81,6 @@ function createMarbleNoise(x, y, width, height) {
       let offset = i * 4;
 
       let xyValue = x * xPeriod / width + y * yPeriod / height + turbPower * turbulence(x, y, turbSize) / 256.0;
-      // console.log(xyValue);
       let sineValue = 256 * Math.abs(Math.sin(xyValue * 3.14159));
       //color.r = color.g = color.b = Uint8(sineValue);
       // pset(x, y, color);
@@ -161,14 +160,11 @@ function createCircleNoise(x, y, radius) {
       nextRandom = Math.random() * 255;
       let valueFunc = 1;
       let distanceFactor = new Point(x,y).getDistance(center)/radius;
-      console.log(new Point(x,y).getDistance(center))
       if (distanceFactor > 1) {
         alpha = 0;
       } else {
-        console.log('outside!')
         alpha = distanceFactor * 55;
       }
-      console.log(valueFunc)
       let value = (prevRandom + nextRandom)/2;
 
       prevRandom = nextRandom;
@@ -252,10 +248,6 @@ function createNoise(x, y, width, height, waviness, alpha) {
     // without this there is 1 artifact per row
     i -=1;
   }
-  console.log('negs!: '+negCount);
-  console.log('crevices: ' + creviceCount);
-  console.log('color1s: '+color1Count);
-  console.log('color2s: '+color2Count);
   raster.setImageData(imageData, new Point(0, 0));
   raster.position = new Point(x, y);
   raster.opacity = 1;

@@ -21,30 +21,30 @@
 	<body>
 		<script src="main.js" canvas="planet-canvas"></script>
 		<div class="main-container">
-			<div class="left-viewport">
+			<div class="left-viewport" id="typewriter">
 			</div>
 			<div class="center-viewport">
 				<canvas id="planet-canvas"/>
 			</div>
-			<div class="left-viewport">
+			<div class="right-viewport">
+				<div id="now-playing">Now Playing:</div>
+				<div id="current-track"></div>
+				<div id="current-artist"></div>
 			</div>
-		</div>
-		<!-- <div class="background-container">
-			<div class="sun-container">
-				<img src="sun.png" style="position:relative; right: 40px; top: 50%; width: 80px;"/>
-			</div>
-			<img class="mountain-background" src="mountain_bg2.png"/>
-		</div> -->
-		<div class="foreground-container">
-			<!-- <img class="mountain-foreground-left" src="small_mountain2fake.png" -->
 		</div>
 		<div class="console">
 			<input type="image" id="playButton" src="play_button.png" alt="Play" />
 			<input type="image" id="pauseButton" src="pause_button.png" alt="Pause" />
-			<!-- <input type="image" id="dolphinButton" src="dolphin_button.png" alt="Dolphin" /> -->
-			<input type="image" id="nextButton" src="fast_forward_button.png" alt="Next" />
-			<div class="station" id="currentStation"></div>
 		</div>
 		<div id="audio_box"></div>
+		<div class="info-box">
+			<input type="image" id="questionMark" src="question_mark.png" alt="About" />
+		</div>
+		<div id="aboutContainer" class="about-container">
+			Touch the sky to create a star. Touch a moon to erase.<br>
+			Consumes International Space Station feed from: <a href="https://www.nasa.gov/content/nasa-rss-feeds">nasa.gov/content/nasa-rss-feeds</a><br>
+			Consumes internet radio from: <a href="http://lifechillmusic.com">lifechillmusic.com</a><br>
+			Exostation code at: <a href="https://github.com/johnstoecker/exostation">https://github.com/johnstoecker/exostation</a><br>
+		</div>
 	</body>
 </html>
