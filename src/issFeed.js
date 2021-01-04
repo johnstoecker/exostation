@@ -2,9 +2,9 @@ import Typewriter from 'typewriter-effect/dist/core';
 import Parser from 'rss-parser';
 
 function updateScroll(){
+    console.log('updating scroll');
     var element = document.getElementById("typewriter");
     element.scrollTop = element.scrollHeight;
-    setInterval(updateScroll,1000);
 };
 
 function startISSFeed() {
@@ -51,7 +51,7 @@ function startISSFeed() {
         }
 
       }
-      updateScroll();
+      setInterval(updateScroll, 500);
     }
     console.log(matches)
 

@@ -82,6 +82,7 @@ function startStream() {
   // exostationAudio.audio.controls = false;
   // exostationAudio.audio.style.position = "absolute"
   // exostationAudio.audio.style.bottom = "10px"
+  chillAudio.volume = 0.5
   chillAudio.id = "radioStream"
   document.getElementById('audio_box').appendChild(chillAudio);
 

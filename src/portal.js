@@ -1,7 +1,7 @@
 import { Color, Group, Path, Point } from 'paper';
 
 function createPortal(worldData) {
-  let portalPosition = new Point(Math.random() * 20 + 340, Math.random() * 8 + worldData.horizonHeight);
+  let portalPosition = new Point(Math.random() * 20 + 340, 10 + worldData.horizonHeight);
   let portalGroup = new Group();
   const portalBounds = new Path.Rectangle(portalPosition.x - 15, portalPosition.y - 15, 30, 22);
   portalBounds.opacity = 0;
@@ -11,7 +11,7 @@ function createPortal(worldData) {
 //
   portalGlow.fillColor = {
           gradient: {
-              stops: ['blue', 'blue', 'blue', 'blue', new Color(0,0,1, 0.2)],
+              stops: ['blue', 'blue', 'blue', new Color(1,1,1, 0.2)],
               radial: true
           },
           origin: portalPosition,

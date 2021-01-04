@@ -7,6 +7,7 @@ body {
 
 .main-container {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   width: 100vw;
   background-color: #bfbfbf;
@@ -118,7 +119,15 @@ canvas {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1023px) {
+  .center-viewport {
+    flex: 1 0 0;
+    max-width: none;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
   .console input {
     height: 50px;
   }
@@ -139,8 +148,8 @@ canvas {
   }
 }
 
-@media only screen and (min-width: 1000px) {
-  .background-container {
-    bottom: 55%;
+@media only screen and (max-width: 1279px) {
+  .right-viewport {
+    display: none;
   }
 }

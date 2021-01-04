@@ -4,15 +4,16 @@ import feed from './issFeed';
 import metadata from './metadata';
 
 window.onload = function() {
+  world.setupCanvas();
   world.createWorld();
   const width  = window.innerWidth || document.documentElement.clientWidth ||
 document.body.clientWidth;
   console.log(width);
   if (width > 767) {
-    feed.startISSFeed();
+    // feed.startISSFeed();
   }
   if (width > 1023) {
-    metadata.getCurrentSong();
+    // metadata.getCurrentSong();
   }
   // audio.playPause();
   document.getElementById("playButton").addEventListener("click", audio.playPause);

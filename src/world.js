@@ -7,6 +7,7 @@ import Sky from './sky';
 import Portal from './portal';
 
 let worldData = {};
+window.worldData = worldData;
 const MAX_WIDTH = 700;
 
 //const HEIGHT =
@@ -20,36 +21,44 @@ const MAX_WIDTH = 700;
  */
 
 
-
-function createWorld() {
-
+function setupCanvas() {
   paper.setup('planet-canvas');
 
   // TODO: phone factor makes this smaller
-  worldData.width = 700;
+  console.log(window.innerWidth);
+  if (window.innerWidth < 1024) {
+    worldData.width = window.innerWidth;
+  } else {
+    worldData.width = 700;
+  }
   worldData.height = window.innerHeight;
   worldData.topLeft = new Point(view.bounds.x,view.bounds.y)
   worldData.bottomRight = new Point(view.bounds.width, view.bounds.height)
   worldData.horizonHeight = 500;
   worldData.bottomLeftHorizon = new Point(0, worldData.horizonHeight)
   worldData.bottomRightHorizon = new Point(view.bounds.width, worldData.horizonHeight);
+  view.draw();
+}
 
-
+function createWorld() {
   let skyContainer = Sky.createSky(worldData);
   worldData.moon = skyContainer.moon;
   worldData.sky = skyContainer.sky;
   worldData.stars = skyContainer.stars;
   worldData.sea = createSea(worldData);
+  worldData.portal = Portal.createPortal(worldData);
   worldData.islandsContainer = Island.createIslands(worldData);
   worldData.boat = Boat.createBoat(worldData);
-  worldData.portal = Portal.createPortal(worldData);
 
   worldData.sea.onClick = moveBoat;
   worldData.portal.onClick = moveBoat;
+  setTimeout(() => {view.onFrame = onFrame;}, 200);
 
-  view.onFrame = onFrame;
+}
 
-  view.draw();
+function destroyWorld() {
+  view.onFrame = null;
+  project.activeLayer.clear();
 }
 
 function moveBoat(event) {
@@ -65,11 +74,23 @@ function moveBoat(event) {
 function stopBoat() {
   worldData.boatTarget = null;
   worldData.boatAngle = null;
-  worldData.boat.getChildren()[2].opacity = 0;
+  if (worldData.boat && worldData.boat.getChildren().length > 2) {
+    worldData.boat.getChildren()[2].opacity = 0;
+  }
 }
 
 function onFrame(event) {
+  if (!(worldData.boat || worldData.boat.getChildren() < 3)) {
+    return;
+  }
   let boatSpeed = 5;
+
+  if(worldData.boat.intersects(worldData.portal.getChildren()[1]) && (worldData.boat.position.y - worldData.portal.position.y < 4)) {
+    stopBoat();
+    worldData.boat.removeChildren();
+    setTimeout(destroyWorld, 200);
+    setTimeout(createWorld, 400);
+  }
 
   if(event.count % 3 == 0 && worldData.boatTarget && worldData.boatAngle) {
 
@@ -141,5 +162,6 @@ function createSea(worldData) {
 
 export default {
   worldData: worldData,
+  setupCanvas: setupCanvas,
   createWorld: createWorld
 }
