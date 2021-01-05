@@ -2,9 +2,12 @@ import Typewriter from 'typewriter-effect/dist/core';
 import Parser from 'rss-parser';
 
 function updateScroll(){
-    console.log('updating scroll');
     var element = document.getElementById("typewriter");
-    element.scrollTop = element.scrollHeight;
+    var isScrolledToBottom = element.scrollHeight - element.clientHeight <= element.scrollTop + 80;
+    // auto-scroll if we are at bottom, otherwise stay where you are.
+    if (isScrolledToBottom) {
+      element.scrollTop = element.scrollHeight;
+    }
 };
 
 function startISSFeed() {
@@ -53,7 +56,6 @@ function startISSFeed() {
       }
       setInterval(updateScroll, 500);
     }
-    console.log(matches)
 
   })();
 

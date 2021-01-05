@@ -2,8 +2,12 @@
 import { Color, Raster, Size, Point } from 'paper';
 
 import SimplexNoise from 'simplex-noise';
-let simplex = new SimplexNoise()
+let simplex;
 
+
+function reseedNoise() {
+  simplex = new SimplexNoise();
+}
 
 
 // line noise function
@@ -56,6 +60,94 @@ function turbulence(x, y, size)
   return(128.0 * value / initialSize);
 }
 
+// i dont want to mess with the other one right now....
+// in a real project, i would de-dupe this. but hey!
+function normalizedTurbulence(x, y, size) {
+  let value = 0.0
+  let initialSize = size;
+
+  while(size >= 1)
+  {
+    value += (simplex.noise2D(x/size, y/size)+1) * size;
+    // value += smoothNoise(x / size, y / size) * size;
+    size /= 2.0;
+  }
+
+  return(value / initialSize) - 1;
+}
+
+function createNebulaNoise(xPos, yPos, width, height, nebulaColor) {
+  // nebulaColor = new Color('green');
+  console.log('hue: ' + nebulaColor.hue);
+  console.log('lightness: ' + nebulaColor.lightness);
+  let raster = new Raster(new Size(width, height));
+  raster.setSize(new Size(width, height));
+  let imageData = raster.createImageData(new Size(width, height));
+  let i = 0;
+
+  for(var y=0; y< height; y++) {
+    for(var x=0; x<width; x++) {
+      let offset = i*4;
+      // let L = (skyColor.saturation*255 + (turbulence(x, y, 64)/ 4)*5)/255;
+      let saturation = normalizedTurbulence(x, y, 128);
+      let alpha = 255;
+
+      // edge detection, decrease noise at edge to there aren't cutoffs
+      if (y < 10) {
+        alpha = alpha * (y/10);
+      } else if (y > height - 10) {
+        alpha = alpha * (height-y)/10;
+      }
+
+      let color = new Color({ hue: nebulaColor.hue, saturation: saturation, lightness: nebulaColor.lightness});
+      imageData.data[offset] = Math.floor(color.red * 255);
+      imageData.data[offset+1] = Math.floor(color.green * 255);
+      imageData.data[offset+2] = Math.floor(color.blue * 255);
+      imageData.data[offset+3] = alpha;
+      i = i+1;
+    }
+  }
+
+  raster.setImageData(imageData, new Point(0, 0));
+  raster.position = new Point(xPos, yPos);
+  raster.opacity = 1;
+  return raster;
+}
+
+function createCloudNoise(xPos, yPos, width, height, skyColor) {
+  let raster = new Raster(new Size(width, height));
+  raster.setSize(new Size(width, height));
+  let imageData = raster.createImageData(new Size(width, height));
+  let i = 0;
+
+  for(var y=0; y< height; y++) {
+    for(var x=0; x<width; x++) {
+      let offset = i*4;
+      // let L = (skyColor.saturation*255 + (turbulence(x, y, 64)/ 4)*5)/255;
+      let lightness = normalizedTurbulence(x, y, 128);
+      let alpha = 255 * (0.75-lightness);
+
+      // edge detection, decrease noise at edge to there aren't cutoffs
+      if (y < 30) {
+        alpha = alpha * (y/30);
+      } else if (y > height - 60) { // looks better with longer cutoff on top
+        alpha = alpha * (height-y)/60;
+      }
+
+      let color = new Color({ hue: skyColor.hue, saturation: skyColor.saturation, lightness: lightness});
+      imageData.data[offset] = Math.floor(color.red * 255);
+      imageData.data[offset+1] = Math.floor(color.green * 255);
+      imageData.data[offset+2] = Math.floor(color.blue * 255);
+      imageData.data[offset+3] = alpha;
+      i = i+1;
+    }
+  }
+
+  raster.setImageData(imageData, new Point(0, 0));
+  raster.position = new Point(xPos, yPos);
+  raster.opacity = 1;
+  return raster;
+}
 
 function createMarbleNoise(x, y, width, height) {
 
@@ -259,6 +351,9 @@ export default {
   createNoise:createNoise,
   createCircleNoise: createCircleNoise,
   createLineNoise: createLineNoise,
+  createCloudNoise: createCloudNoise,
+  createNebulaNoise: createNebulaNoise,
   createRedNoise: createRedNoise,
-  createMarbleNoise: createMarbleNoise
+  createMarbleNoise: createMarbleNoise,
+  reseedNoise: reseedNoise
 }

@@ -8,12 +8,12 @@ window.onload = function() {
   world.createWorld();
   const width  = window.innerWidth || document.documentElement.clientWidth ||
 document.body.clientWidth;
-  console.log(width);
   if (width > 767) {
     // feed.startISSFeed();
   }
   if (width > 1023) {
-    // metadata.getCurrentSong();
+    // metaData.getCurrentSong();
+    // setInterval(metadata.getCurrentSong(), 30000);
   }
   // audio.playPause();
   document.getElementById("playButton").addEventListener("click", audio.playPause);

@@ -41,6 +41,7 @@ function setupCanvas() {
 }
 
 function createWorld() {
+  Noise.reseedNoise();
   let skyContainer = Sky.createSky(worldData);
   worldData.moon = skyContainer.moon;
   worldData.sky = skyContainer.sky;
@@ -59,6 +60,8 @@ function createWorld() {
 function destroyWorld() {
   view.onFrame = null;
   project.activeLayer.clear();
+  let x = new Path.Rectangle(0, 0, view.bounds.width, view.bounds.height);
+  x.fillColor = 'lightgrey';
 }
 
 function moveBoat(event) {

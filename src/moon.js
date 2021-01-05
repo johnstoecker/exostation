@@ -7,6 +7,9 @@ function createMoon(worldData) {
   let moonX = Math.random() * 15 + view.bounds.width/2 - 8;
   let moonY = Math.random() * 15 + worldData.horizonHeight - 80;
   let moonRadius = Math.random() * 15 + 35;
+  worldData.moonX = moonX;
+  worldData.moonY = moonY;
+  worldData.moonRadius = moonRadius;
   let moon = new Path.Circle(new Point(moonX, moonY), moonRadius);
   // moon.strokeColor = 'white';
   moon.fillColor = 'white';
@@ -29,6 +32,7 @@ function createMoon(worldData) {
   for (let i=0; i < 6; i++) {
     let moonSpot = createMoonSpot(moonX, moonY, moonRadius);
     moonNoiseGroup.addChild(moonSpot);
+
     moonNoiseGroup.addChild(Noise.createCircleNoise(moonSpot.position.x, moonSpot.position.y, moonSpot.toShape().radius))
   }
   moonNoiseGroup.insertChild(0, moonClipper);
@@ -43,7 +47,7 @@ function createMoon(worldData) {
 function createMoonSpot(moonX, moonY, moonRadius) {
   let moonSpotX = Math.random() * moonRadius * 2 + moonX - moonRadius;
   let moonSpotY = Math.random() * moonRadius * 2 + moonY - moonRadius;
-  let moonSpotRadius = Math.random() * moonRadius / 5;
+  let moonSpotRadius = Math.max(Math.random() * moonRadius / 5, 1);
   let moonSpot = new Path.Circle(new Point(moonSpotX, moonSpotY), moonSpotRadius);
   moonSpot.fillColor = 'white';
   return moonSpot;
