@@ -76,28 +76,54 @@ function normalizedTurbulence(x, y, size) {
   return(value / initialSize) - 1;
 }
 
-function createNebulaNoise(xPos, yPos, width, height, nebulaColor) {
-  // nebulaColor = new Color('green');
-  console.log('hue: ' + nebulaColor.hue);
-  console.log('lightness: ' + nebulaColor.lightness);
+function createNebulaNoise(xPos, yPos, width, height, nebulaColor, options={}) {
   let raster = new Raster(new Size(width, height));
   raster.setSize(new Size(width, height));
   let imageData = raster.createImageData(new Size(width, height));
   let i = 0;
 
+  // edge mask to eat away at edges, dont have cutoff edges
+  let edgeMask = [];
+  // how big the edge mask eater is
+  if (options.alphaMask) {
+    let EDGE_MASK_HEIGHT = height/2;
+    for(var y=0; y<height; y++) {
+      edgeMask.push([]);
+      for(var x=0; x<width; x++) {
+        // the further we are from the edge, the stronger the signal gets
+        let alphaMaskDistancer = y/EDGE_MASK_HEIGHT;
+        if (y > EDGE_MASK_HEIGHT) {
+          alphaMaskDistancer = (height - y)/EDGE_MASK_HEIGHT;
+        }
+        let alphaMask = normalizedTurbulence(x, y,64) * alphaMaskDistancer;
+        if (x == 0) {
+          edgeMask[y] = [alphaMask];
+        } else {
+          edgeMask[y].push(alphaMask);
+        }
+      }
+    }
+  }
+
   for(var y=0; y< height; y++) {
     for(var x=0; x<width; x++) {
       let offset = i*4;
       // let L = (skyColor.saturation*255 + (turbulence(x, y, 64)/ 4)*5)/255;
-      let saturation = normalizedTurbulence(x, y, 128);
+      let saturation = normalizedTurbulence(x, y, options.turbulence || 128);
       let alpha = 255;
+      if (options.alphaMask) {
+        alpha = 255*edgeMask[y][x];
+      }
+      // if (y < EDGE_MASK_HEIGHT) {
+      //   alpha *= edgeMask[y][x];
+      // }
 
       // edge detection, decrease noise at edge to there aren't cutoffs
-      if (y < 10) {
-        alpha = alpha * (y/10);
-      } else if (y > height - 10) {
-        alpha = alpha * (height-y)/10;
-      }
+      // if (y < 10) {
+      //   alpha = alpha * (y/10);
+      // } else if (y > height - 10) {
+      //   alpha = alpha * (height-y)/10;
+      // }
 
       let color = new Color({ hue: nebulaColor.hue, saturation: saturation, lightness: nebulaColor.lightness});
       imageData.data[offset] = Math.floor(color.red * 255);
@@ -127,6 +153,8 @@ function createCloudNoise(xPos, yPos, width, height, skyColor) {
       let lightness = normalizedTurbulence(x, y, 128);
       let alpha = 255 * (0.75-lightness);
 
+      // TODO: naive edge removal, for each y, if it has something just go straight down,
+      // remove, until we dont.
       // edge detection, decrease noise at edge to there aren't cutoffs
       if (y < 30) {
         alpha = alpha * (y/30);

@@ -14,6 +14,7 @@ function createSky(worldData) {
   let skyColor1, skyColor2;
   skyColor1 = new Color('black');
   skyColor2 = new Color(Math.random(), Math.random(), Math.random());
+  worldData.skyColor = skyColor2;
   sky.fillColor = {
             gradient: {
                 stops: [skyColor1, skyColor2]
@@ -31,19 +32,36 @@ function createSky(worldData) {
 
    skyContainer.sky = sky;
 
+   // add some nebulae, sometimes
    // if (Math.random() < 0.5) {
-     let nebula = Noise.createNebulaNoise(view.center.x, view.center.y-100, view.bounds.width * 1.5, 60, skyColor2);
-     nebula.rotate(-30);
+     // let numNebulae = Math.random() * 3 + 2;
+     // for (var i=0;i<numNebulae;i++) {
+     //   let singleNebulaGroup = new Group();
+     //   let nebulaSize = Math.random() * 200+50;
+     //   let nebulaLocation = new Point(Math.random()*view.bounds.width,Math.random()*(worldData.horizonHeight-200));
+     //   // nebulaLocation = new Point(200,200);
+     //   let nebulaClipper = new Path();
+     //   let numPoints = Math.random() * 10+6;
+     //   for(var j=0; j<numPoints; j++) {
+     //     nebulaClipper.add(new Point(nebulaLocation.x+Math.random() * nebulaSize, nebulaLocation.y+Math.random() * nebulaSize));
+     //   }
+     //   nebulaClipper.smooth();
+     //   singleNebulaGroup.addChild(nebulaClipper);
+     //   let nebula = Noise.createNebulaNoise(nebulaLocation.x+nebulaSize/2, nebulaLocation.y+nebulaSize/2, nebulaSize, nebulaSize, skyColor2, {alphaMask: true});
+     //   singleNebulaGroup.addChild(nebula);
+     //   singleNebulaGroup.clipped = true;
+     //   // singleNebulaGroup.opacity = 0.15;
+     // }
    // }
 
    skyContainer.moon = Moon.createMoon(worldData);
-   // skyContainer.planet = Planet.createPlanet();
 
    skyContainer.stars = Star.createStars(worldData, skyContainer.moon);
+   skyContainer.planet = Planet.createPlanet(worldData);
 
    skyGroup.addChild(Noise.createLineNoise(view.center.x, view.center.y, view.bounds.width, view.bounds.height, 5));
    //sometimes clouds
-   if (Math.random() < 0.5) {
+   if (Math.random() < 0.3) {
      Noise.createCloudNoise(view.center.x, worldData.horizonHeight - 80, view.bounds.width, 120, skyColor2);
    }
 

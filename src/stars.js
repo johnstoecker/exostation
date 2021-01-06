@@ -27,7 +27,7 @@ function getStarColorAndSize() {
     starSize = Math.floor(Math.random() * 2 + 1);
   // red
   } else if(mainColorRandomizer < 0.75) {
-    starColor =  new Color(1, 0.1, 0.25);
+    starColor =  new Color(0.6, 0.1, 0.25);
     //blue
   } else if (mainColorRandomizer < 0.9) {
     starColor = new Color(0.1, 0.25, 1);
