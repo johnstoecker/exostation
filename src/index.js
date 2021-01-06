@@ -9,11 +9,11 @@ window.onload = function() {
   const width  = window.innerWidth || document.documentElement.clientWidth ||
 document.body.clientWidth;
   if (width > 767) {
-    // feed.startISSFeed();
+    feed.startISSFeed();
   }
   if (width > 1023) {
-    // metaData.getCurrentSong();
-    // setInterval(metadata.getCurrentSong(), 30000);
+    metaData.getCurrentSong();
+    setInterval(metadata.getCurrentSong(), 30000);
   }
   // audio.playPause();
   document.getElementById("playButton").addEventListener("click", audio.playPause);
