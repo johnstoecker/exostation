@@ -1,10 +1,10 @@
 import { Color, Group,Path,Point,Raster,Size,view,paper,project } from 'paper';
-import Star from './stars';
+import Star from './atmosphere/stars';
 import Noise from './noise';
-import Island from './islands';
-import Boat from './boat';
-import Sky from './sky';
-import Portal from './portal';
+import Island from './surface/islands';
+import Boat from './surface/boat';
+import Sky from './atmosphere/sky';
+import Portal from './surface/portal';
 
 let worldData = {};
 window.worldData = worldData;

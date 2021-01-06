@@ -1,5 +1,5 @@
 import { Color, Group, Path, Point } from 'paper';
-import Noise from './noise';
+import Noise from '../noise';
 
 
 function createIslands(worldData) {

@@ -102,6 +102,12 @@ canvas {
   bottom: -10px;
 }
 
+iframe {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
 #pauseButton {
   display: none;
 }

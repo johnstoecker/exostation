@@ -1,6 +1,6 @@
 import { Color, Group, Path, Point, Raster, view } from 'paper';
 import Star from './stars';
-import Noise from './noise';
+import Noise from '../noise';
 
 function createPlanet(worldData) {
 
@@ -27,6 +27,7 @@ function createPlanet(worldData) {
     if (planetSize < 50) {
       skyTurbulence = 32;
     }
+    Noise.reseedNoise();
     let planetSky = Noise.createNebulaNoise(planetLocation.x, planetLocation.y, planetSize, planetSize, worldData.skyColor, {alphaMask: true, turbulence: skyTurbulence});
     planetGroup.addChild(planetSky);
     planetGroup.clipped = true;

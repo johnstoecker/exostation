@@ -1,6 +1,6 @@
 import { Color, Group, Path, Point, Raster, view } from 'paper';
 import Star from './stars';
-import Noise from './noise';
+import Noise from '../noise';
 
 function createMoon(worldData) {
   let moonGroup = new Group();

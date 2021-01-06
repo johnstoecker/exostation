@@ -1,8 +1,9 @@
 import { Color, Group, Path, Point, Raster, view } from 'paper';
 import Star from './stars';
-import Noise from './noise';
+import Noise from '../noise';
 import Moon from './moon';
 import Planet from './planet';
+import Cloud from './clouds';
 
 function createSky(worldData) {
   let skyContainer = {}
@@ -60,10 +61,7 @@ function createSky(worldData) {
    skyContainer.planet = Planet.createPlanet(worldData);
 
    skyGroup.addChild(Noise.createLineNoise(view.center.x, view.center.y, view.bounds.width, view.bounds.height, 5));
-   //sometimes clouds
-   if (Math.random() < 0.3) {
-     Noise.createCloudNoise(view.center.x, worldData.horizonHeight - 80, view.bounds.width, 120, skyColor2);
-   }
+   Cloud.createClouds(worldData);
 
    let skyClicker = new Path.Rectangle(0, 0, view.bounds.width, worldData.horizonHeight);
    skyClicker.fillColor = 'black';
