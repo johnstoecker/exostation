@@ -19,6 +19,8 @@ document.body.clientWidth;
   document.getElementById("playButton").addEventListener("click", audio.play);
   document.getElementById("pauseButton").addEventListener("click", audio.pause);
 
+  document.getElementById("receive-broadcast-button").addEventListener("click", feed.startISSFeed);
+
   document.getElementById("questionMark").addEventListener("click", toggleShowAbout, false);
   window.addEventListener('click', windowClickListener, false);
 

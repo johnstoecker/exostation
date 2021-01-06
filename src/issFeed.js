@@ -5,6 +5,7 @@ function updateScroll(){
     var element = document.getElementById("typewriter");
     var isScrolledToBottom = element.scrollHeight - element.clientHeight <= element.scrollTop + 80;
     // auto-scroll if we are at bottom, otherwise stay where you are.
+    console.log(isScrolledToBottom);
     if (isScrolledToBottom) {
       element.scrollTop = element.scrollHeight;
     }

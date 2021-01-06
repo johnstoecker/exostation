@@ -21,12 +21,16 @@
 	<body>
 		<script src="main.js" canvas="planet-canvas"></script>
 		<div class="main-container">
-			<div class="left-viewport" id="typewriter">
+			<div class="left-viewport">
+				Receive broadcast from earth:
+				<input type="image" id="receive-broadcast-button" src="down_caret.png" class="down-caret-button"></input>
+				<div id="typewriter"></div>
 			</div>
 			<div class="center-viewport">
 				<canvas id="planet-canvas"/>
 			</div>
 			<div class="right-viewport">
+				Sensors indicate a vast, calm, alien sea under the moon.
 				<div id="now-playing">Now Playing:</div>
 				<div id="current-track"></div>
 				<div id="current-artist"></div>

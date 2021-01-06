@@ -17,9 +17,22 @@ body {
 
 .left-viewport {
   flex: 1 0 0;
-  overflow: scroll;
-  max-height:80vh;
+  /* max-height:80vh; */
+  /* overflow: scroll; */
   padding:10px 15px;
+}
+
+#typewriter {
+  max-height:80vh;
+  overflow: scroll;
+}
+
+.down-caret-button {
+  height: 15px;
+  padding-top: 10px;
+  position:relative;
+  left: 5px;
+  top: 5px;
 }
 
 .center-viewport {
