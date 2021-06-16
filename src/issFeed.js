@@ -26,18 +26,18 @@ function startISSFeed() {
 
 
   let parser = new Parser();
-  const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+  const CORS_PROXY = "feed.txt";
 
   (async () => {
 
-    let feed = await parser.parseURL(CORS_PROXY + 'https://blogs.nasa.gov/stationreport/feed/');
+    // let feed = await parser.parseURL(CORS_PROXY');
     // console.log(feed.title);
     //
     // feed.items.forEach(item => {
     //   console.log(item.title + ':' + item.link)
     // });
     //
-    let feed2 = await fetch(CORS_PROXY+feed.items[0].link)
+    let feed2 = await fetch('feed.txt')
     let text = await feed2.text();
     // console.log(text);
     // console.log(text.match(/(?<=\<h1>).*(?=\<\/h1>)/));

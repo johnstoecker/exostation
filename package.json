@@ -24,6 +24,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "fs": "*",
+    "node-fetch": "^2.6.1",
     "paper": "^0.12.8",
     "rss-parser": "^3.10.0",
     "simplex-noise": "^2.4.0",

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="fb:pages" content="54971236771" />
+	<meta property="og:type" content="website" />
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="https://blogs.nasa.gov/stationreport/xmlrpc.php">
+		<link rel="shortcut icon" href="https://blogs.nasa.gov/stationreport/wp-content/themes/2016nasablogs/images/favicon.ico" />
+	<script type="text/javascript" src="https://www.nasa.gov/scripts/federated-analytics.all.min.js?agency=NASA&yt=true"></script>
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>ISS Daily Summary Report – 6/15/2021 &#8211; ISS On-Orbit Status Report</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="ISS On-Orbit Status Report &raquo; Feed" href="https://blogs.nasa.gov/stationreport/feed/" />
+<link rel="alternate" type="application/rss+xml" title="ISS On-Orbit Status Report &raquo; Comments Feed" href="https://blogs.nasa.gov/stationreport/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="ISS On-Orbit Status Report &raquo; ISS Daily Summary Report – 6/15/2021 Comments Feed" href="https://blogs.nasa.gov/stationreport/2021/06/15/iss-daily-summary-report-6-15-2021/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blogs.nasa.gov\/stationreport\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://blogs.nasa.gov/stationreport/wp-includes/css/dist/block-library/style.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://blogs.nasa.gov/stationreport/wp-includes/css/dist/block-library/theme.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wppa_style-css'  href='https://blogs.nasa.gov/stationreport/wp-content/plugins/wp-photo-album-plus/theme/wppa-style.css?ver=210611-25106' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='https://blogs.nasa.gov/stationreport/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/style.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='https://blogs.nasa.gov/stationreport/wp-content/themes/2016nasablogs/style.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/genericons/genericons.css?ver=3.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-style-css'  href='https://blogs.nasa.gov/stationreport/wp-content/themes/2016nasablogs/style.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentysixteen-block-style-css'  href='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/css/blocks.css?ver=20181018' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css'  href='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/css/ie.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css'  href='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/css/ie8.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css'  href='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/css/ie7.css?ver=20160816' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='addthis_all_pages-css'  href='https://blogs.nasa.gov/stationreport/wp-content/plugins/addthis/frontend/build/addthis_wordpress_public.min.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='__EPYT__style-css'  href='https://blogs.nasa.gov/stationreport/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=13.4.2' type='text/css' media='all' />
+<style id='__EPYT__style-inline-css' type='text/css'>
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+                         @media (min-width:0px) and (max-width: 767px) {
+                            .epyt-gallery-rowbreak {
+                                display: none;
+                            }
+                            .epyt-gallery-allthumbs[class*="epyt-cols"] .epyt-gallery-thumb {
+                                width: 100% !important;
+                            }
+                          }
+</style>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/jquery.form.min.js?ver=4.2.1'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/ui/resizable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-includes/js/jquery/ui/dialog.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-content/plugins/wp-photo-album-plus/js/wppa-all.js?ver=210611-25106'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-content/uploads/sites/221/wppa/dynamic/wppa-init.en.js?ver=357613'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/blogs.nasa.gov\/stationreport\/wp-admin\/admin-ajax.php","security":"a06dfc3e5e","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/blogs.nasa.gov\/stationreport\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/blogs.nasa.gov\/stationreport\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs__\",\"iframe[src*='youtube.com']\",\"iframe[src*='youtube-nocookie.com']\",\"iframe[data-ep-src*='youtube.com']\",\"iframe[data-ep-src*='youtube-nocookie.com']\",\"iframe[data-ep-gallerysrc*='youtube.com']\"]","epdovol":"1","version":"13.4.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=13.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blogs.nasa.gov/stationreport/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blogs.nasa.gov/stationreport/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='ISS Daily Summary Report – 6/14/2021' href='https://blogs.nasa.gov/stationreport/2021/06/14/iss-daily-summary-report-6-14-2021/' />
+<meta name="generator" content="NASA Blogs" />
+
+<link rel="canonical" href="https://blogs.nasa.gov/stationreport/2021/06/15/iss-daily-summary-report-6-15-2021/" />
+<link rel='shortlink' href='https://blogs.nasa.gov/stationreport/?p=5949' />
+<script>
+/* START PHOTO sc and TynyMce fe vars from p-f*/
+wppaImageDirectory = "https://blogs.nasa.gov/stationreport/wp-content/plugins/wp-photo-album-plus/img/";
+wppaPhotoDirectory = "https://blogs.nasa.gov/stationreport/wp-content/uploads/sites/221/wppa/";
+wppaNoPreview = "No Preview available";
+wppaTxtProcessing = "Processing...";
+wppaTxtDone = "Done!";
+wppaTxtErrUnable = "ERROR: unable to upload files.";
+wppaOutputType = "-none-";
+wppaShortcodeTemplate = "";
+wppaShortcodeTemplateId = ".";
+/* END PHOTO and TynMce */
+</script><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style><script data-cfasync="false" type="text/javascript">if (window.addthis_product === undefined) { window.addthis_product = "wpp"; } if (window.wp_product_version === undefined) { window.wp_product_version = "wpp-6.2.6"; } if (window.addthis_share === undefined) { window.addthis_share = {}; } if (window.addthis_config === undefined) { window.addthis_config = {"data_track_clickback":true,"ignore_server_config":true,"ui_atversion":300}; } if (window.addthis_layers === undefined) { window.addthis_layers = {}; } if (window.addthis_layers_tools === undefined) { window.addthis_layers_tools = [{"responsiveshare":{"numPreferredServices":5,"counts":"none","size":"20px","style":"responsive","shareCountThreshold":0,"services":"facebook,twitter,pinterest_share,tumblr,myspace,blogger","elements":".addthis_inline_share_toolbox_above,.at-above-post-homepage,.at-above-post-arch-page,.at-above-post-cat-page,.at-above-post,.at-above-post-page","id":"responsiveshare"}}]; } else { window.addthis_layers_tools.push({"responsiveshare":{"numPreferredServices":5,"counts":"none","size":"20px","style":"responsive","shareCountThreshold":0,"services":"facebook,twitter,pinterest_share,tumblr,myspace,blogger","elements":".addthis_inline_share_toolbox_above,.at-above-post-homepage,.at-above-post-arch-page,.at-above-post-cat-page,.at-above-post,.at-above-post-page","id":"responsiveshare"}});  } if (window.addthis_plugin_info === undefined) { window.addthis_plugin_info = {"info_status":"enabled","cms_name":"WordPress","plugin_name":"Share Buttons by AddThis","plugin_version":"6.2.6","plugin_mode":"WordPress","anonymous_profile_id":"wp-5fef1a5128390270ac1732964663d78e","page_info":{"template":"posts","post_type":""},"sharing_enabled_on_post_via_metabox":false}; } 
+                    (function() {
+                      var first_load_interval_id = setInterval(function () {
+                        if (typeof window.addthis !== 'undefined') {
+                          window.clearInterval(first_load_interval_id);
+                          if (typeof window.addthis_layers !== 'undefined' && Object.getOwnPropertyNames(window.addthis_layers).length > 0) {
+                            window.addthis.layers(window.addthis_layers);
+                          }
+                          if (Array.isArray(window.addthis_layers_tools)) {
+                            for (i = 0; i < window.addthis_layers_tools.length; i++) {
+                              window.addthis.layers(window.addthis_layers_tools[i]);
+                            }
+                          }
+                        }
+                     },1000)
+                    }());
+                </script> <script data-cfasync="false" type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=wp-5fef1a5128390270ac1732964663d78e" async="async"></script>
+<!-- WPPA+ START Page/language dependant data -->
+<script type="text/javascript" >
+wppaImageDirectory = "https://blogs.nasa.gov/stationreport/wp-content/plugins/wp-photo-album-plus/img/";
+wppaWppaUrl = "https://blogs.nasa.gov/stationreport/wp-content/plugins/wp-photo-album-plus";
+wppaIncludeUrl = "https://blogs.nasa.gov/stationreport/wp-includes";
+wppaAjaxUrl = "https://blogs.nasa.gov/stationreport/wp-admin/admin-ajax.php";
+wppaUploadUrl = "https://blogs.nasa.gov/stationreport/wp-content/uploads/sites/221/wppa";
+wppaIsIe = false;
+wppaIsSafari = false;
+wppaSlideshowNavigationType = "icons";
+wppaAudioHeight = 28;
+wppaFilmThumbTitle = "Double click to start/stop slideshow running";
+wppaClickToView = "Click to view";
+wppaLang = "en";
+wppaVoteForMe = "Vote for me!";
+wppaVotedForMe = "Voted for me";
+wppaDownLoad = "Download";
+wppaSlideShow = "Slideshow";
+wppaPhoto = "Photo";
+wppaOf = "of";
+wppaNextPhoto = "Next photo";
+wppaPreviousPhoto = "Previous photo";
+wppaNextP = "Next";
+wppaPrevP = "Prev.";
+wppaAvgRating = "Average&nbsp;rating";
+wppaMyRating = "My&nbsp;rating";
+wppaAvgRat = "Avg.";
+wppaMyRat = "Mine";
+wppaDislikeMsg = "You marked this image as inappropriate.";
+wppaStart = "Start";
+wppaStop = "Stop";
+wppaPleaseName = "Please enter your name";
+wppaPleaseEmail = "Please enter a valid email address";
+wppaPleaseComment = "Please enter a comment";
+wppaProcessing = "Processing...";
+wppaDone = "Done!";
+wppaUploadFailed = "Upload failed";
+wppaServerError = "Server error.";
+wppaGlobalFsIconSize = "32";
+wppaFsFillcolor = "#999999";
+wppaFsBgcolor = "transparent";
+wppaFsPolicy = "lightbox";
+</script>
+<!-- WPPA+ END Page/language dependant data -->
+<!-- WPPA+ Custom styles -->
+<style type="text/css" >
+</style>
+<!-- Rendering enabled -->
+<!-- /WPPA Kickoff -->
+
+	</head>
+
+<body class="post-template-default single single-post postid-5949 single-format-standard wp-embed-responsive group-blog">
+<div id="page" class="site">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-header-main">
+				<div class="site-branding">
+										
+					<a href="https://www.nasa.gov"
+						class="custom-logo-link" rel="home" itemprop="url">
+
+				<img width="240" height="240"
+										src="https://blogs.nasa.gov/stationreport/wp-content/themes/2016nasablogs/images/nasa-logo.svg"
+										class="custom-logo"
+										alt="NASA"
+										itemprop="logo"
+										srcset="https://blogs.nasa.gov/stationreport/wp-content/themes/2016nasablogs/images/nasa-logo.svg 110w, https://blogs.nasa.gov/stationreport/wp-content/themes/2016nasablogs/images/nasa-logo.svg 110w" sizes="(max-width: 240px) 85vw, 92px">
+
+					</a>
+
+
+											<p class="site-title"><a href="https://blogs.nasa.gov/stationreport/" rel="home">ISS On-Orbit Status Report</a></p>
+					
+					
+				</div><!-- .site-branding -->
+
+									<button id="menu-toggle" class="menu-toggle">Menu</button>
+
+					<div id="site-header-menu" class="site-header-menu">
+						
+				
+
+								
+				
+					<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-topmenu-container">
+							<ul id="menu-topmenu" class="primary-menu">
+								<li><a href="https://blogs.nasa.gov">NASA Blogs Home</a></li>
+								
+								</ul>
+							</div>
+					</nav>
+				
+
+					</nav><!-- .main-navigation -->
+						
+											</div><!-- .site-header-menu -->
+							</div><!-- .site-header-main -->
+
+					</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+<article id="post-5949" class="post-5949 post type-post status-publish format-standard hentry category-112 category-june-2021">
+	<header class="entry-header">
+		<h1 class="entry-title">ISS Daily Summary Report – 6/15/2021</h1>	</header><!-- .entry-header -->
+
+	
+	
+	<div class="entry-content">
+		<div class="at-above-post addthis_tool" data-url="https://blogs.nasa.gov/stationreport/2021/06/15/iss-daily-summary-report-6-15-2021/"></div><p><strong>Payloads:</strong></p>
+<p><strong>Oral Biofilms in Space (OBIS):</strong> The crew hydrated the OBIS assembly session packs 6-10 with fluid flow from Fluid Bag 1 into the Fluid Chamber for 30 minutes. The mixture was allowed to sit for 4 hours and then the fluid flow was reinitiated. The session packs were then incubated for 20 hours. Fluid Bag 1 is a fluid medium containing chemicals designed to promote bacterial growth within the Fluid Chamber. Effect of Environmental Stressors on Oral Biofilm Growth and Treatment (Oral Biofilms in Space) studies the effect of gravity on the behavior of oral bacteria, including the structure of the bacterial community, and changes in bacterial response to common oral care agents. The findings could support development of novel treatments to fight oral diseases such as caries, gingivitis, and periodontitis. The investigation also could provide insights into how microgravity affects the microbiome of other mucosal surfaces in the body.</p>
+<p><strong>Systems:</strong></p>
+<p><strong>Mobile Base System (MBS) Payload/Orbital Replacement Unit (ORU) Accommodation (POA) Video Recovered</strong> – Over the weekend, teams developed a command-from-scratch to work around a software error in Mobile Servicing System (MSS) version 10.2 which prevented POA video from being routed to the ground. The new commands were tested, approved yesterday morning, and successfully executed on-board yesterday afternoon. POA video is now available for ISS Roll Out Solar Array (IROSA) Flight Support Equipment (FSE) POA removal and installation tasks in support of this week’s EVAs.</p>
+<p><strong>Extravehicular Activity (EVA) Preparations:</strong> The crew performed several activities in preparation for tomorrow’s 2B IROSA install EVA. The crew setup the Equipment Lock (E-LK) and Robotic Workstation (RWS), installed batteries into the EVA Pistol Grip Tool (PGT) and performed an EVA tool audit. Lastly, they completed a procedure review and conference with ISS ground teams.</p>
+<p><strong>Completed Task List Activities:</strong></p>
+<ul>
+<li>None</li>
+</ul>
+<p><strong>Today&#8217;s Ground Activities:<br />
+</strong><strong>All activities are complete unless otherwise noted.</strong></p>
+<ul>
+<li>Ground support for RSA water transfer</li>
+<li>Atmosphere Revitalization System (ARS) Thermal Amine Scrubber (TAS) Vacuum Leak Check <strong>[ACTIVE]</strong></li>
+</ul>
+<p><strong>Look Ahead Plan:</strong></p>
+<p><strong>Wednesday, June 16 (GMT 167)<br />
+</strong><strong>Payloads:</strong></p>
+<ul>
+<li>OBIS Bag2 initiate (NASA)</li>
+<li>AC Touch (NASA)</li>
+</ul>
+<p><strong>Systems:</strong></p>
+<ul>
+<li>2B IROSA EVA</li>
+</ul>
+<p><strong>Thursday, June 17 (GMT 168)<br />
+</strong><strong>Payloads:</strong></p>
+<ul>
+<li>OBIS Bag3 initiate (NASA)</li>
+<li>Food Acceptability (NASA)</li>
+<li>ManD print of AstroVest parts (NASA)</li>
+<li>Lyo-2 Sample stow and install (NASA)</li>
+<li>Food Physiology Brief (NASA)</li>
+<li>Standard Measures Presleep Question (NASA)</li>
+<li>NRCSD-20 Deployer removal (NASA)</li>
+<li>ISS HAM (NASA)</li>
+</ul>
+<p><strong>Systems:</strong></p>
+<ul>
+<li>EVA tether inspection</li>
+<li>Extravehicular Mobility Unit (EMU) Long Life Battery (LLB)/Metal Oxide (METOX) Installation</li>
+<li>EVA debrief</li>
+<li>Rechargeable EVA Battery Assembly (REBA) charge</li>
+<li>In Flight Maintenance (IFM) Waste and Hygiene Compartment (WHC) Pre-Treat Tank Remove &amp; Replace</li>
+</ul>
+<p><strong>Friday, June 18 (GMT 169)<br />
+</strong><strong>Payloads:</strong></p>
+<ul>
+<li>JAXA Moderate Temp PCG Sample prep (JAXA)</li>
+<li>AC Touch (NASA)</li>
+<li>Food Acceptability (NASA)</li>
+<li>NanoRacks Module-83 Photo (NASA)</li>
+<li>Standard Measures Post Sleep Question (NASA)</li>
+<li>PK-4 disk audit (Joint)</li>
+</ul>
+<p><strong>Systems:</strong></p>
+<ul>
+<li>Robotics Procedure Review</li>
+<li>Extravehicular Activity (EVA) Procedure Review</li>
+<li>EVA tool configuration</li>
+<li>ROBoT training</li>
+</ul>
+<p><strong>Today&#8217;s Planned Activities:<br />
+</strong><strong>All activities are complete unless otherwise noted.</strong></p>
+<ul>
+<li>Health Maintenance System (HMS) Periodic Health Status (PHS) Pre EVA Examination</li>
+<li>Dragon Cargo Transfer</li>
+<li>Robotics Procedure Review</li>
+<li>Equipment Lock (E-LK) Preparation</li>
+<li>Extravehicular Activity Station Support Computer Relocate</li>
+<li>Extravehicular Activity (EVA) Tool Configuring</li>
+<li>Extravehicular Activity Pistol Grip Tool Battery Installation</li>
+<li>Extravehicular Activity (EVA) Tool Audit</li>
+<li>Solid Combustion (SCEM) OS Troubleshoot</li>
+<li>Oral Biofilms In Space (OBiS) Assembly Hydration</li>
+<li>Extravehicular Activity (EVA) Procedure Review</li>
+<li>Oral Biofilms In Space (OBiS) Fluid Chamber Power Down</li>
+<li>Extravehicular Activity (EVA) Procedure Conference</li>
+<li>Artemis HEREA Power Down</li>
+<li>Extravehicular Activity (EVA) iPad Contingency Procedures preparation</li>
+<li>Robotic Workstation (RWS) Setup</li>
+<li>RSA Water Transfer</li>
+<li>Urine Transfer System Offload EDV Swap</li>
+<li>Oral Biofilms In Space (OBiS) Fluid Chamber Power On</li>
+<li>Oral Biofilms In Space (OBiS) MERLIN OBiS Assemblies Insertion</li>
+</ul>
+<!-- AddThis Advanced Settings above via filter on the_content --><!-- AddThis Advanced Settings below via filter on the_content --><!-- AddThis Advanced Settings generic via filter on the_content --><!-- AddThis Share Buttons above via filter on the_content --><!-- AddThis Share Buttons below via filter on the_content --><div class="at-below-post addthis_tool" data-url="https://blogs.nasa.gov/stationreport/2021/06/15/iss-daily-summary-report-6-15-2021/"></div><!-- AddThis Share Buttons generic via filter on the_content -->	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="byline"><span class="author vcard"><img alt='' src='https://secure.gravatar.com/avatar/5389c2d541ef946127f5c88a3f7524c2?s=49&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/5389c2d541ef946127f5c88a3f7524c2?s=98&#038;d=mm&#038;r=g 2x' class='avatar avatar-49 photo' height='49' width='49' /><span class="screen-reader-text">Author </span> <a class="url fn n" href="https://blogs.nasa.gov/stationreport/author/wkeeter/">Bill Keeter</a></span></span><span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://blogs.nasa.gov/stationreport/2021/06/15/iss-daily-summary-report-6-15-2021/" rel="bookmark"><time class="entry-date published" datetime="2021-06-15T16:00:32+00:00">June 15, 2021</time><time class="updated" datetime="2021-06-16T13:41:57+00:00">June 16, 2021</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="https://blogs.nasa.gov/stationreport/category/2021/" rel="category tag">2021</a>, <a href="https://blogs.nasa.gov/stationreport/category/2021/june-2021/" rel="category tag">June</a></span>			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+	<nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://blogs.nasa.gov/stationreport/2021/06/14/iss-daily-summary-report-6-14-2021/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">ISS Daily Summary Report – 6/14/2021</span></a></div></div>
+	</nav>
+	</main><!-- .site-main -->
+
+	<aside id="content-bottom-widgets" class="content-bottom-widgets" role="complementary">
+			<div class="widget-area">
+			<section id="search-6" class="widget widget_search"><h2 class="widget-title">Search On-Orbit Reports</h2>
+<form role="search" method="get" class="search-form" action="https://blogs.nasa.gov/stationreport/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">Search</span></button>
+</form>
+</section><section id="calendar-2" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar" class="wp-calendar-table">
+	<caption>June 2021</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/01/" aria-label="Posts published on June 1, 2021">1</a></td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/02/" aria-label="Posts published on June 2, 2021">2</a></td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/03/" aria-label="Posts published on June 3, 2021">3</a></td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+		<td>6</td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/07/" aria-label="Posts published on June 7, 2021">7</a></td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/08/" aria-label="Posts published on June 8, 2021">8</a></td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/09/" aria-label="Posts published on June 9, 2021">9</a></td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/10/" aria-label="Posts published on June 10, 2021">10</a></td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/11/" aria-label="Posts published on June 11, 2021">11</a></td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/14/" aria-label="Posts published on June 14, 2021">14</a></td><td><a href="https://blogs.nasa.gov/stationreport/2021/06/15/" aria-label="Posts published on June 15, 2021">15</a></td><td id="today">16</td><td>17</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table><nav aria-label="Previous and next months" class="wp-calendar-nav">
+		<span class="wp-calendar-nav-prev"><a href="https://blogs.nasa.gov/stationreport/2021/05/">&laquo; May</a></span>
+		<span class="pad">&nbsp;</span>
+		<span class="wp-calendar-nav-next">&nbsp;</span>
+	</nav></div></section><section id="archives-3" class="widget widget_archive"><h2 class="widget-title">Archives</h2>		<ul>
+				<li><a href='https://blogs.nasa.gov/stationreport/2021/06/'>June 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/05/'>May 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/04/'>April 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/03/'>March 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/02/'>February 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/01/'>January 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/12/'>December 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/11/'>November 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/10/'>October 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/09/'>September 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/08/'>August 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/07/'>July 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/06/'>June 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/05/'>May 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/04/'>April 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/03/'>March 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/02/'>February 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/01/'>January 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/12/'>December 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/11/'>November 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/10/'>October 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/09/'>September 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/08/'>August 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/07/'>July 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/06/'>June 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/05/'>May 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/04/'>April 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/03/'>March 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/02/'>February 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/01/'>January 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/12/'>December 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/11/'>November 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/10/'>October 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/09/'>September 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/08/'>August 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/07/'>July 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/06/'>June 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/05/'>May 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/04/'>April 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/03/'>March 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/02/'>February 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/01/'>January 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/12/'>December 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/11/'>November 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/10/'>October 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/09/'>September 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/08/'>August 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/07/'>July 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/06/'>June 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/05/'>May 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/04/'>April 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/03/'>March 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/02/'>February 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/01/'>January 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/12/'>December 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/11/'>November 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/10/'>October 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/09/'>September 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/08/'>August 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/07/'>July 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/06/'>June 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/05/'>May 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/04/'>April 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/03/'>March 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/02/'>February 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/01/'>January 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/12/'>December 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/11/'>November 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/10/'>October 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/09/'>September 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/08/'>August 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/07/'>July 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/06/'>June 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/05/'>May 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/04/'>April 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/03/'>March 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/02/'>February 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/01/'>January 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/12/'>December 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/11/'>November 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/10/'>October 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/09/'>September 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/08/'>August 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/07/'>July 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/06/'>June 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/05/'>May 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/04/'>April 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/03/'>March 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/02/'>February 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/01/'>January 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/12/'>December 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/11/'>November 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/10/'>October 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/09/'>September 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/08/'>August 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/07/'>July 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/06/'>June 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/05/'>May 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/04/'>April 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/03/'>March 2013</a></li>
+		</ul>
+			</section><section id="text-2" class="widget widget_text"><h2 class="widget-title">Past Years</h2>			<div class="textwidget"><a href="https://www.nasa.gov/directorates/heo/reports/iss_reports/2012/ISS_Reports_SearchAgent_archive_1.html">Archived 2012 reports</a><br />
+
+<a href="https://www.nasa.gov/directorates/heo/reports/iss_reports/2011/ISS_Reports_SearchAgent_archive_1.html">Archived 2011 reports</a><br />
+
+<a href="https://www.nasa.gov/directorates/heo/reports/iss_reports/2010/ISS_Reports_SearchAgent_archive_1.html">Archived 2010 reports</a>
+<br />
+<a href="https://www.nasa.gov/directorates/heo/reports/iss_reports/2009/ISS_Reports_SearchAgent_archive_1.html">Archived 2009 reports</a>
+<br />
+<a href="https://www.nasa.gov/pdf/318312main_reports2008.pdf">Archived 2008 reports (PDF)</a><br />
+
+<a href="https://www.nasa.gov/pdf/318303main_reports2007.pdf">Archived 2007 reports (PDF)</a><br />
+
+<a href="https://www.nasa.gov/pdf/318277main_reports2006_Oct-Dec.pdf">Archived 2006 reports Oct-Dec (PDF)</a><br /></div>
+		</section><section id="tag_cloud-3" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud"><ul class='wp-tag-cloud' role='list'>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2013/" class="tag-cloud-link tag-link-6 tag-link-position-1" style="font-size: 1em;">2013</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2014/" class="tag-cloud-link tag-link-17 tag-link-position-2" style="font-size: 1em;">2014</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2015/" class="tag-cloud-link tag-link-30 tag-link-position-3" style="font-size: 1em;">2015</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2016-2/" class="tag-cloud-link tag-link-47 tag-link-position-4" style="font-size: 1em;">2016</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2017/" class="tag-cloud-link tag-link-60 tag-link-position-5" style="font-size: 1em;">2017</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2018/" class="tag-cloud-link tag-link-73 tag-link-position-6" style="font-size: 1em;">2018</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2019/" class="tag-cloud-link tag-link-86 tag-link-position-7" style="font-size: 1em;">2019</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2020/" class="tag-cloud-link tag-link-99 tag-link-position-8" style="font-size: 1em;">2020</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2021/" class="tag-cloud-link tag-link-112 tag-link-position-9" style="font-size: 1em;">2021</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2013/april/" class="tag-cloud-link tag-link-10 tag-link-position-10" style="font-size: 1em;">April</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2015/april-2015/" class="tag-cloud-link tag-link-34 tag-link-position-11" style="font-size: 1em;">April</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2018/august-2018/" class="tag-cloud-link tag-link-81 tag-link-position-12" style="font-size: 1em;">August</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2016-2/august-2016-2/" class="tag-cloud-link tag-link-55 tag-link-position-13" style="font-size: 1em;">August</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2013/august/" class="tag-cloud-link tag-link-12 tag-link-position-14" style="font-size: 1em;">August</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2014/august-2014/" class="tag-cloud-link tag-link-25 tag-link-position-15" style="font-size: 1em;">August</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2015/august-2015/" class="tag-cloud-link tag-link-39 tag-link-position-16" style="font-size: 1em;">August</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2016-2/december-2016-2/" class="tag-cloud-link tag-link-59 tag-link-position-17" style="font-size: 1em;">December</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2017/december-2017/" class="tag-cloud-link tag-link-72 tag-link-position-18" style="font-size: 1em;">December</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2014/december-2014/" class="tag-cloud-link tag-link-29 tag-link-position-19" style="font-size: 1em;">December</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2013/december/" class="tag-cloud-link tag-link-16 tag-link-position-20" style="font-size: 1em;">December</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2016-2/february-2016-2/" class="tag-cloud-link tag-link-49 tag-link-position-21" style="font-size: 1em;">February</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2018/january-2018/" class="tag-cloud-link tag-link-74 tag-link-position-22" style="font-size: 1em;">January</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2014/january/" class="tag-cloud-link tag-link-18 tag-link-position-23" style="font-size: 1em;">January</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2018/july-2018/" class="tag-cloud-link tag-link-80 tag-link-position-24" style="font-size: 1em;">July</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2014/july-2014/" class="tag-cloud-link tag-link-24 tag-link-position-25" style="font-size: 1em;">July</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2013/july/" class="tag-cloud-link tag-link-8 tag-link-position-26" style="font-size: 1em;">July</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2015/july-2015/" class="tag-cloud-link tag-link-38 tag-link-position-27" style="font-size: 1em;">July</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2017/june-2017/" class="tag-cloud-link tag-link-66 tag-link-position-28" style="font-size: 1em;">June</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2014/june-2014/" class="tag-cloud-link tag-link-23 tag-link-position-29" style="font-size: 1em;">June</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2015/june-2015/" class="tag-cloud-link tag-link-37 tag-link-position-30" style="font-size: 1em;">June</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2020/march-2020/" class="tag-cloud-link tag-link-102 tag-link-position-31" style="font-size: 1em;">March</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2018/march-2018/" class="tag-cloud-link tag-link-76 tag-link-position-32" style="font-size: 1em;">March</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2015/march-2015/" class="tag-cloud-link tag-link-33 tag-link-position-33" style="font-size: 1em;">March</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2017/march-2017/" class="tag-cloud-link tag-link-63 tag-link-position-34" style="font-size: 1em;">March</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2016-2/march-2016-2/" class="tag-cloud-link tag-link-50 tag-link-position-35" style="font-size: 1em;">March</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2013/may/" class="tag-cloud-link tag-link-9 tag-link-position-36" style="font-size: 1em;">May</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2019/may-2019/" class="tag-cloud-link tag-link-91 tag-link-position-37" style="font-size: 1em;">May</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2017/may-2017/" class="tag-cloud-link tag-link-65 tag-link-position-38" style="font-size: 1em;">May</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2018/may-2018/" class="tag-cloud-link tag-link-78 tag-link-position-39" style="font-size: 1em;">May</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2016-2/november-2016-2/" class="tag-cloud-link tag-link-58 tag-link-position-40" style="font-size: 1em;">November</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2013/november/" class="tag-cloud-link tag-link-15 tag-link-position-41" style="font-size: 1em;">November</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2018/october-2018/" class="tag-cloud-link tag-link-83 tag-link-position-42" style="font-size: 1em;">October</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2013/october/" class="tag-cloud-link tag-link-14 tag-link-position-43" style="font-size: 1em;">October</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2014/october-2014/" class="tag-cloud-link tag-link-27 tag-link-position-44" style="font-size: 1em;">October</a></li>
+	<li><a href="https://blogs.nasa.gov/stationreport/category/2016-2/september-2016-2/" class="tag-cloud-link tag-link-56 tag-link-position-45" style="font-size: 1em;">September</a></li>
+</ul>
+</div>
+</section>		</div><!-- .widget-area -->
+	
+	</aside><!-- .content-bottom-widgets -->
+
+</div><!-- .content-area -->
+
+
+	<aside id="secondary" class="sidebar widget-area" role="complementary">
+		<section id="archives-2" class="widget widget_archive"><h2 class="widget-title">My Archives</h2>		<ul>
+				<li><a href='https://blogs.nasa.gov/stationreport/2021/06/'>June 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/05/'>May 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/04/'>April 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/03/'>March 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/02/'>February 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2021/01/'>January 2021</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/12/'>December 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/11/'>November 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/10/'>October 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/09/'>September 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/08/'>August 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/07/'>July 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/06/'>June 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/05/'>May 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/04/'>April 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/03/'>March 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/02/'>February 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2020/01/'>January 2020</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/12/'>December 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/11/'>November 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/10/'>October 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/09/'>September 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/08/'>August 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/07/'>July 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/06/'>June 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/05/'>May 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/04/'>April 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/03/'>March 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/02/'>February 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2019/01/'>January 2019</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/12/'>December 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/11/'>November 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/10/'>October 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/09/'>September 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/08/'>August 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/07/'>July 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/06/'>June 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/05/'>May 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/04/'>April 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/03/'>March 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/02/'>February 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2018/01/'>January 2018</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/12/'>December 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/11/'>November 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/10/'>October 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/09/'>September 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/08/'>August 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/07/'>July 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/06/'>June 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/05/'>May 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/04/'>April 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/03/'>March 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/02/'>February 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2017/01/'>January 2017</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/12/'>December 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/11/'>November 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/10/'>October 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/09/'>September 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/08/'>August 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/07/'>July 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/06/'>June 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/05/'>May 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/04/'>April 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/03/'>March 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/02/'>February 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2016/01/'>January 2016</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/12/'>December 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/11/'>November 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/10/'>October 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/09/'>September 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/08/'>August 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/07/'>July 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/06/'>June 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/05/'>May 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/04/'>April 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/03/'>March 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/02/'>February 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2015/01/'>January 2015</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/12/'>December 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/11/'>November 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/10/'>October 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/09/'>September 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/08/'>August 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/07/'>July 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/06/'>June 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/05/'>May 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/04/'>April 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/03/'>March 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/02/'>February 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2014/01/'>January 2014</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/12/'>December 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/11/'>November 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/10/'>October 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/09/'>September 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/08/'>August 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/07/'>July 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/06/'>June 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/05/'>May 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/04/'>April 2013</a></li>
+	<li><a href='https://blogs.nasa.gov/stationreport/2013/03/'>March 2013</a></li>
+		</ul>
+			</section>	</aside><!-- .sidebar .widget-area -->
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			
+			
+			<div class="site-info">
+					
+				<div id="nasa-footer-info">
+		
+				<a class="nasafooterlogo" href="https://www.nasa.gov">
+				  <img src="https://blogs.nasa.gov/stationreport/wp-content/themes/2016nasablogs/images/nasa-logo.svg" alt="NASA logo">
+				</a>
+
+				
+				<div id="status">
+					<span class="site-title"><a href="https://blogs.nasa.gov/stationreport/" rel="home">ISS On-Orbit Status Report</a></span>	
+				  <span>National&nbsp;Aeronautics and Space&nbsp;Administration</span>
+				  <span>NASA Official: Brian Dunbar</span>
+				</div>
+			  </div>
+			  
+			  <ul id="nasa-footer-links" class="">
+				  <li><a href="http://odeo.hq.nasa.gov/nofear.html">No Fear Act</a></li>
+				  <li><a href="http://www.nasa.gov/FOIA">FOIA</a></li>
+				  <li><a href="http://www.nasa.gov/about/highlights/HP_Privacy.html">Privacy</a></li>
+				  <li><a href="http://oig.nasa.gov/">Office of Inspector General</a></li>
+				  <li><a href="http://www.nasa.gov/news/budget/index.html">Agency Financial Reports</a></li>
+				  <li><a href="http://www.nasa.gov/about/contact/index.html">Contact NASA</a></li>
+			</ul>
+			  
+				
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/js/skip-link-focus-fix.js?ver=20160816'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-content/themes/twentysixteen/js/functions.js?ver=20160816'></script>
+<script type='text/javascript' src='https://blogs.nasa.gov/stationreport/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=13.4.2'></script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.224 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-06-16 18:58:35 -->
+
+<!-- super cache -->
