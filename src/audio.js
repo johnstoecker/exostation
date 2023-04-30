@@ -38,13 +38,13 @@ var currentStreamIndex = 0;
 // }
 
 function play() {
-  document.getElementById("video-player").src="https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1";
+  document.getElementById("video-player").src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1";
   document.getElementById("playButton").style.display = 'none';
   document.getElementById("pauseButton").style.display = 'block';
 }
 
 function pause() {
-  document.getElementById("video-player").src="https://www.youtube.com/embed/5qap5aO4i9A?mute=1";
+  document.getElementById("video-player").src="https://www.youtube.com/embed/jfKfPfyJRdk?mute=1";
   document.getElementById("playButton").style.display = 'block';
   document.getElementById("pauseButton").style.display = 'none';
 }
